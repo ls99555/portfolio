@@ -42,11 +42,6 @@ export default function Header() {
           }`}
         >
           <li className={styles.navItem}>
-            <a href="#about" onClick={closeMenu}>
-              About Me
-            </a>
-          </li>
-          <li className={styles.navItem}>
             <a href="#contact" onClick={closeMenu}>
               Contact Me
             </a>
