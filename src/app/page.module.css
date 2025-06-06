@@ -13,43 +13,43 @@
     background-color: azure;
 }
 
-.one {
+.banner {
     grid-column: 1 / 5; /* Spans columns 1 and 2 */
     grid-row: 1 / 2;
     background: #ff0000;
 }
 
-.two {
-    grid-column: 1 / 3; /* Spans columns 3 and 4 */
+.me {
+    grid-column: 1 / 2; /* Spans columns 3 and 4 */
     grid-row: 2 / 4;
     background: #00ff00;
 }
 
-.three {
+.timeWeather {
     grid-column: 3 / 5; /* First column */
     grid-row: 2 / 3;    /* Second row */
     background: #0000ff;
 }
 
-.four {
+.cv {
     grid-column: 3 / 4; /* Second column */
     grid-row: 3 / 4;    /* Second row */
     background: #ffff00;
 }
 
-.five {
-    grid-column: 4 / 5; /* Third column */
-    grid-row: 3 / 4;    /* Second row */
+.skills {
+    grid-column: 2 / 3; /* Third column */
+    grid-row: 2 / 4;    /* Second row */
     background: #ff00ff;
 }
 
-.six {
+.work {
     grid-column: 4 / 5; /* Fourth column */
     grid-row: 3 / 4;    /* Second row */
     background: #00ffff;
 }
 
-.seven {
+.contact {
     grid-column: 1 / 5; /* Spans columns 1 and 2 */
     grid-row: 4 / 5;    /* Third row */
     background: #000000;
