@@ -1,59 +1,108 @@
 .layout {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 2fr; /* Custom column widths */
-    grid-template-rows: 900px 300px 300px 800px;         /* Two rows, first is taller */
-    gap: 16px;      /* Space between grid items */
+    grid-template-columns: 100px 1fr 1fr 1fr 100px; /* Custom column widths */
+    grid-template-rows: 850px 440px 400px 400px 450px 850px;         /* Two rows, first is taller */     /* Space between grid items */
     width: 100vw;                          /* Take full viewport width */
     max-width: 100vw;                      /* Prevent overflow */
     margin: 0;                             /* Remove default margin */
-    box-sizing: border-box;                         
+    box-sizing: border-box;  
+    gap: var(--spacing-large);  
+                       
 }
-
-.main {
-    background-color: azure;
-}
-
 .banner {
-    grid-column: 1 / 5; /* Spans columns 1 and 2 */
+    grid-column: 1 / 6; /* Spans columns 1 and 2 */
     grid-row: 1 / 2;
     background: #ff0000;
+    margin: 0;
+}
+
+
+.me,
+.time,
+.weather,
+.cv,
+.skills,
+.work,
+.contact,
+.softSkills,
+.technicalSkills {
+    overflow: hidden;
+    min-width: 0;
+    min-height: 0;
+    box-sizing: border-box;
+    word-break: break-word;
+    padding: var(--spacing-medium);
+    background-color: var(--color-background-section);
+    border-radius: 20px;
+}
+
+.me, .technicalSkills {
+    margin-top: 80px;
 }
 
 .me {
-    grid-column: 1 / 2; /* Spans columns 3 and 4 */
-    grid-row: 2 / 4;
-    background: #00ff00;
+    grid-column: 2 / 4; /* Spans columns 3 and 4 */
+    grid-row: 2 / 3;
 }
 
-.timeWeather {
-    grid-column: 3 / 5; /* First column */
-    grid-row: 2 / 3;    /* Second row */
-    background: #0000ff;
+.time {
+    grid-column: 2 / 4; /* First column */
+    grid-row: 4 / 5;    /* Second row */
+}
+
+.weather {
+    grid-column: 2 / 4; /* First column */
+    grid-row: 3 / 4;    /* Second row */
 }
 
 .cv {
-    grid-column: 3 / 4; /* Second column */
-    grid-row: 3 / 4;    /* Second row */
-    background: #ffff00;
+    grid-column: 4 / 5; /* Second column */
+    grid-row: 5 / 6;    /* Second row */
 }
 
-.skills {
-    grid-column: 2 / 3; /* Third column */
+.technicalSkills {
+    grid-column: 4 / 5; /* Third column */
     grid-row: 2 / 4;    /* Second row */
-    background: #ff00ff;
+    text-align: center;
+}
+
+.softSkills {
+    grid-column: 4 / 5; /* Third column */
+    grid-row: 4 / 5;    /* Second row */
+    text-align: center;
 }
 
 .work {
-    grid-column: 4 / 5; /* Fourth column */
-    grid-row: 3 / 4;    /* Second row */
-    background: #00ffff;
+    grid-column: 2 / 4; /* Fourth column */
+    grid-row: 5 / 6;    /* Second row */
 }
 
 .contact {
-    grid-column: 1 / 5; /* Spans columns 1 and 2 */
-    grid-row: 4 / 5;    /* Third row */
-    background: #000000;
+    grid-column: 3 / 5; /* Spans columns 1 and 2 */
+    grid-row: 6 / 7;    /* Third row */
 }
 
 
+@media (max-width: 900px) {
+  .layout {
+    grid-template-rows: 1000px 600px 600px 1000px;
+  }
+}
 
+@media (max-width: 600px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, minmax(400px, auto));
+  }
+  .banner,
+  .me,
+  .timeWeather,
+  .cv,
+  .technicalSkills,
+  .softSkills,
+  .work,
+  .contact {
+    grid-column: 1 / 2;
+    grid-row: auto;
+  }
+}
