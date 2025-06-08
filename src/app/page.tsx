@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import ContactForm from "../components/contact-form";
 import WeatherWidget from "../components/weather-widget";
+import WorkCarousel from "../components/work-carousel";
 
 function Banner() {
   return (
@@ -118,10 +119,26 @@ function WorkPreview() {
   return (
     <section id="work" className={styles.work}>
       <h2>Preview of Andreea's Website</h2>
-      {/* Add website preview here */}
+      <WorkCarousel items={workItems} />
     </section>
   );
 }
+
+const workItems = [
+  {
+    title: "NextGenTherapy",
+    image: "/images/project1.png",
+    description: "A Website for a therapist I made.",
+    link: "https://next-gen-therapy-git-main-lukes-projects-f436770d.vercel.app/"
+  },
+  {
+    title: "Project Two",
+    image: "/images/project2.png",
+    description: "Another awesome project.",
+    link: "https://example.com/project2"
+  },
+  // Add more items as needed
+];
 
 function Contact() {
   return (

@@ -3,7 +3,7 @@
 import { useState, ChangeEvent, FormEvent } from "react";
 import { CloudIcon, MapPinIcon, ThermometerIcon } from "lucide-react";
 import Button from "./button";
-import styles from "./wether-widget.module.css";
+import styles from "./weather-widget.module.css";
 
 interface WeatherData {
   temperature: number;

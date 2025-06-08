@@ -15,7 +15,7 @@
 .layoutBottom {
     display: grid;
     grid-template-columns: 100px 1fr 1fr 1fr 100px; /* Custom column widths */
-    grid-template-rows: 400px 400px 400px 850px;         /* Two rows, first is taller */     /* Space between grid items */
+    grid-template-rows: 600px 400px 400px 850px;         /* Two rows, first is taller */     /* Space between grid items */
     width: 100vw;                          /* Take full viewport width */
     max-width: 100vw;                      /* Prevent overflow */
     margin: 0;                             /* Remove default margin */

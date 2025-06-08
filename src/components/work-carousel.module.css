@@ -1,0 +1,44 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-medium);
+}
+
+.slide {
+  background: var(--color-background-secondary);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: var(--spacing-medium);
+  text-align: center;
+  width: 300px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: var(--spacing-small);
+}
+
+.nav {
+  background: var(--color-background);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--color-text);
+  padding: 0 0.5rem;
+}
+.link {
+color: var(--color-accent);
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.link:hover,
+.link:focus {
+  color: var(--color-accent-hover);
+  text-decoration: none
+}
