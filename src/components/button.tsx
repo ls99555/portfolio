@@ -1,13 +1,12 @@
 import Link from "next/link";
 import styles from "./button.module.css";
 
-interface ButtonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
   children: React.ReactNode;
-  type?: "button" | "submit" | "reset";
 }
 
-export default function Button({ href, children, type = "button" }: ButtonProps) {
+export default function Button({ href, children, ...props }: ButtonProps) {
   // Only allow internal navigation to prevent open redirects
   if (href && href.startsWith("/")) {
     return (
@@ -19,7 +18,7 @@ export default function Button({ href, children, type = "button" }: ButtonProps)
 
   // Render a button (can be used as submit/reset/button)
   return (
-    <button type={type} className={styles.button}>
+    <button className={styles.button} {...props}>
       {children}
     </button>
   );

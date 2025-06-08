@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import ContactForm from "../components/contact-form";
+import WeatherWidget from "../components/weather-widget";
 
 function Banner() {
   return (
@@ -49,9 +50,9 @@ function Time() {
 
 function Weather() {
   return (
-    <section className={styles.weather}>
-      <h2>Weather</h2>
-      {/* Add time and weather content here */}
+    <section className={styles.weather}> 
+      <h2>Whats The Weather Like?</h2>
+      <WeatherWidget />
     </section>
   );
 }
@@ -135,14 +136,16 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <div className={styles.layout}>
+        <div className={styles.layoutTop}>
           <Banner />
           <AboutMe />
-          <Time />
-          <Weather />
-          <CV />
           <TechnicalSkills />
           <SoftSkills />
+          <Weather />
+        </div>
+        <div className={styles.layoutBottom}>
+          <Time />
+          <CV />
           <WorkPreview />
           <Contact />
         </div>

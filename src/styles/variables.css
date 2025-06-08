@@ -1,11 +1,11 @@
 :root {
   /* background colors*/
    --color-background: #000000;
-   --color-background-section: #ffffff;
+   --color-background-secondary: #ffffff;
 
    /* text colors*/
-    --color-text: #000000; 
-    --color-text-secondary: #ffffff;
+    --color-text: #ffffff; 
+    --color-text-secondary: #000000;
     
     /* header and footer colors*/
     --color-header-background: #164B39;
@@ -23,7 +23,8 @@
     --spacing-small: 12px;
     --spacing-medium: 20px;
     --spacing-large: 25px;
-    --spacing-xlarge: 200px;
+    --spacing-layout: 80px;
+    
     --header-height: 100px;
     --footer-height: 200px;
   
