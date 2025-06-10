@@ -40,14 +40,6 @@ function AboutMe() {
   );
 }
 
-function Time() {
-  return (
-    <section className={styles.time}>
-      <h2>Time</h2>
-      {/* Add time and weather content here */}
-    </section>
-  );
-}
 
 function Weather() {
   return (
@@ -161,7 +153,6 @@ export default function Home() {
           <Weather />
         </div>
         <div className={styles.layoutBottom}>
-          <Time />
           <CV />
           <WorkPreview />
           <Contact />

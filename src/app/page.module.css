@@ -1,7 +1,7 @@
 .layoutTop{
     display: grid;
     grid-template-columns: 100px 1fr 1fr 1fr 100px; /* Custom column widths */
-    grid-template-rows: 850px 440px 400px;         /* Two rows, first is taller */     /* Space between grid items */
+    grid-template-rows: 850px 440px 400px 200px;         /* Two rows, first is taller */     /* Space between grid items */
     width: 100vw;                          /* Take full viewport width */
     max-width: 100vw;                      /* Prevent overflow */
     margin: 0;                             /* Remove default margin */
@@ -15,14 +15,15 @@
 .layoutBottom {
     display: grid;
     grid-template-columns: 100px 1fr 1fr 1fr 100px; /* Custom column widths */
-    grid-template-rows: 600px 400px 400px 850px;         /* Two rows, first is taller */     /* Space between grid items */
+    grid-template-rows: 465px 465px 850px;         /* Two rows, first is taller */     /* Space between grid items */
     width: 100vw;                          /* Take full viewport width */
-    max-width: 100vw;                      /* Prevent overflow */
-    margin: 0;                             /* Remove default margin */
+    max-width: 100vw;                      /* Prevent overflow */                            /* Remove default margin */
     box-sizing: border-box;  
     gap: var(--spacing-large);
     color: var(--color-text-secondary); 
     background-color: var(--color-background-secondary);
+    margin: 0;
+    margin-bottom: var(--spacing-layout);
 }
 .banner {
     grid-column: 1 / 6; /* Spans columns 1 and 2 */
@@ -74,28 +75,25 @@
 
 .weather {
     grid-column: 2 / 3; /* First column */
-    grid-row: 3 / 4;    /* Second row */
+    grid-row: 3 / 5;    /* Second row */
     text-align: center;
 }
 
 .work {
-    grid-column: 2 / 5; /* Fourth column */
-    grid-row: 1 / 2;    /* Second row */
+    grid-column: 2 / 4; /* Fourth column */
+    grid-row: 1 / 3;    /* Second row */
+    text-align: center;
+    margin-top: var(--spacing-layout);
 }
 
 .cv {
-    grid-column: 2 / 5; /* Second column */
+    grid-column: 4 / 5; /* Second column */
     grid-row: 2 / 3;    /* Second row */
-}
-
-.time {
-    grid-column: 2 / 5; /* First column */
-    grid-row: 3 / 4;    /* Second row */
 }
 
 .contact {
     grid-column: 2 / 5; /* Spans columns 1 and 2 */
-    grid-row: 4 / 5;    /* Third row */
+    grid-row: 3 / 4;    /* Third row */
 }
 
 

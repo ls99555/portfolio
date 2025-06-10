@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, ChangeEvent, FormEvent } from "react";
+import { useState, ChangeEvent, FormEvent, useEffect } from "react";
 import { CloudIcon, MapPinIcon, ThermometerIcon } from "lucide-react";
 import Button from "./button";
 import styles from "./weather-widget.module.css";
@@ -100,13 +100,30 @@ export default function WeatherWidget() {
     return ` ${location} ${isNight ? "at Night" : "During the Day"}`;
   }
 
+  const [now, setNow] = useState<Date | null>(null);
+
+  useEffect(() => {
+    setNow(new Date());
+    const interval = setInterval(() => setNow(new Date()), 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  let timeString = "";
+  let dateString = "";
+  if (now) {
+    timeString = now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+    dateString = now.toLocaleDateString([], { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+  }
+
   return (
     <section className={styles.weatherCard}>
-      <header className={styles.header}>
-        <p className={styles.description}>
+      <div className={styles.clockContainer}>
+      <div className={styles.time}>{timeString}</div>
+      <div className={styles.date}>{dateString}</div>
+    </div>
+    <p className={styles.description}>
           Search for the current weather conditions in your city.
         </p>
-      </header>
       <form onSubmit={handleSearch} className={styles.form}>
         <input
           className={styles.input}

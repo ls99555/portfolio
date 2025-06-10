@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from "react";
+import Image from "next/image";
 import styles from "./work-carousel.module.css";
 import Button from "./button";
 
@@ -28,7 +29,14 @@ export default function WorkCarousel({ items }: WorkCarouselProps) {
       <Button className={styles.nav} onClick={prev} aria-label="Previous">&#8592;</Button>
       <div className={styles.slide}>
         <h3>{item.title}</h3>
-        <img src={item.image} alt={item.title} className={styles.image} />
+        <Image
+          src={item.image}
+          alt={item.title}
+          className={styles.image}
+          width={600} // adjust as needed
+          height={400} // adjust as needed
+          style={{ objectFit: "cover" }}
+        />
         <p>{item.description}</p>
         {item.link && (
           <a className={styles.link} href={item.link} target="_blank" rel="noopener noreferrer">

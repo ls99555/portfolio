@@ -7,7 +7,6 @@
   min-width: 0;
   min-height: 0;
   margin: 0 auto;
-  padding: 1rem 1rem 1.5rem 1rem;
   text-align: center;
   box-sizing: border-box;
   height: 100%;
@@ -15,6 +14,7 @@
   flex-direction: column;
   justify-content: flex-start;
   border-radius: 16px;
+  gap: var(--spacing-medium);
 }
 
 .header {
@@ -22,8 +22,34 @@
 }
 
 .description {
-  color: var(--color-text-secondary);
+  color: var(--color-text);
 }
+
+.clockContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--color-background-secondary, #222244);
+  color: var(--color-accent);
+  padding: var(--spacing-medium);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  font-family: 'Fira Mono', 'Menlo', 'Monaco', monospace;
+  margin: 0 auto;
+  width: fit-content;
+}
+    .time {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+ .date {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  letter-spacing: 0.05em;
+}
+
 
 .form {
   display: flex;

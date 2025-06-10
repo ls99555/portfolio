@@ -3,15 +3,16 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-medium);
+  color: var(--color-text);
 }
 
 .slide {
-  background: var(--color-background-secondary);
+  background: var(--color-background);
   border-radius: 16px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.08);
   padding: var(--spacing-medium);
   text-align: center;
-  width: 300px;
+  width: 600px;
 }
 
 .image {
@@ -22,15 +23,23 @@
 }
 
 .nav {
-  background: var(--color-background);
+  background: var(--color-button);
   border: none;
   font-size: 2rem;
   cursor: pointer;
   color: var(--color-text);
   padding: 0 0.5rem;
+  border-radius: 16px;
+  transition: color 0.5s;
 }
+
+.nav:active {
+  transition: color 0.6s; /* slower transition on click */
+}
+
+
 .link {
-color: var(--color-accent);
+ color: #ecfd7eb0;
   text-decoration: underline;
   font-weight: 500;
   transition: color 0.2s;
@@ -38,7 +47,9 @@ color: var(--color-accent);
 }
 
 .link:hover,
-.link:focus {
+.link:focus,
+.nav:hover,
+.nav:focus {
   color: var(--color-accent-hover);
   text-decoration: none
 }
