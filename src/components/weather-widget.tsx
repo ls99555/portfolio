@@ -2,19 +2,22 @@
 
 import { useState, ChangeEvent, FormEvent, useEffect } from "react";
 import { CloudIcon, MapPinIcon, ThermometerIcon } from "lucide-react";
+import { DateTime } from "luxon";
 import Button from "./button";
-import styles from "./weather-widget.module.css";
+import styles from "./weather-widget.module.scss";
 
 interface WeatherData {
   temperature: number;
   description: string;
   location: string;
   unit: string;
+  tz_id?: string;
 }
 
 export default function WeatherWidget() {
   const [location, setLocation] = useState<string>("");
   const [weather, setWeather] = useState<WeatherData | null>(null);
+  const [timezone, setTimezone] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -24,6 +27,7 @@ export default function WeatherWidget() {
     if (trimmedLocation === "") {
       setError("Please enter a valid location.");
       setWeather(null);
+      setTimezone(null);
       return;
     }
 
@@ -45,11 +49,14 @@ export default function WeatherWidget() {
         description: data.current.condition.text,
         location: data.location.name,
         unit: "C",
+        tz_id: data.location.tz_id,
       };
       setWeather(weatherData);
+      setTimezone(data.location.tz_id);
     } catch (error) {
       setError("City not found. Please try again.");
       setWeather(null);
+      setTimezone(null);
     } finally {
       setIsLoading(false);
     }
@@ -95,35 +102,47 @@ export default function WeatherWidget() {
   }
 
   function getLocationMessage(location: string): string {
+    // This message is always based on user's local time
     const currentHour = new Date().getHours();
     const isNight = currentHour >= 18 || currentHour < 6;
     return ` ${location} ${isNight ? "at Night" : "During the Day"}`;
   }
 
-  const [now, setNow] = useState<Date | null>(null);
+  // Clock logic
+  const [now, setNow] = useState<Date>(new Date());
 
   useEffect(() => {
-    setNow(new Date());
     const interval = setInterval(() => setNow(new Date()), 1000);
     return () => clearInterval(interval);
   }, []);
 
   let timeString = "";
   let dateString = "";
-  if (now) {
-    timeString = now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
-    dateString = now.toLocaleDateString([], { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+  let timeLabel = "";
+
+  if (timezone && weather) {
+    // Show city time
+    const cityTime = DateTime.now().setZone(timezone);
+    timeString = cityTime.toFormat("HH:mm:ss");
+    dateString = cityTime.toFormat("cccc, d LLLL yyyy");
+    timeLabel = `Time in ${weather.location}`;
+  } else {
+    // Show user local time
+    timeString = now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false });
+    dateString = DateTime.fromJSDate(now).toFormat("cccc d LLLL yyyy");
+    timeLabel = "Your Local Time";
   }
 
   return (
     <section className={styles.weatherCard}>
       <div className={styles.clockContainer}>
-      <div className={styles.time}>{timeString}</div>
-      <div className={styles.date}>{dateString}</div>
-    </div>
-    <p className={styles.description}>
-          Search for the current weather conditions in your city.
-        </p>
+        <div className={styles.time}>{timeString}</div>
+        <div className={styles.date}>{dateString}</div>
+        <div className={styles.timeLabel}>{timeLabel}</div>
+      </div>
+      <p className={styles.description}>
+        Search for the current weather conditions in your city.
+      </p>
       <form onSubmit={handleSearch} className={styles.form}>
         <input
           className={styles.input}

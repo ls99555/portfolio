@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./button.module.css";
+import styles from "./button.module.scss";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;

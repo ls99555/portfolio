@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 import ContactForm from "../components/contact-form";
 import WeatherWidget from "../components/weather-widget";
 import WorkCarousel from "../components/work-carousel";
@@ -36,6 +36,7 @@ function AboutMe() {
         things that are useful and easy to use, and I’m excited to keep growing
         my skills in a professional environment.
       </p>
+      <CV />
     </section>
   );
 }
@@ -53,8 +54,14 @@ function Weather() {
 function CV() {
   return (
     <section id="cv" className={styles.cv}>
-      <h2>CV</h2>
-      {/* Add CV content here */}
+      <a
+        href="/cv.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.cvLink}
+      >
+        View My CV (PDF)
+      </a>
     </section>
   );
 }
@@ -110,7 +117,7 @@ function SoftSkills() {
 function WorkPreview() {
   return (
     <section id="work" className={styles.work}>
-      <h2>Preview of Andreea's Website</h2>
+      <h2>Links to my projects</h2>
       <WorkCarousel items={workItems} />
     </section>
   );
@@ -119,7 +126,7 @@ function WorkPreview() {
 const workItems = [
   {
     title: "NextGenTherapy",
-    image: "/images/project1.png",
+    image: "/images/NextGen.jpg",
     description: "A Website for a therapist I made.",
     link: "https://next-gen-therapy-git-main-lukes-projects-f436770d.vercel.app/"
   },
@@ -153,7 +160,6 @@ export default function Home() {
           <Weather />
         </div>
         <div className={styles.layoutBottom}>
-          <CV />
           <WorkPreview />
           <Contact />
         </div>

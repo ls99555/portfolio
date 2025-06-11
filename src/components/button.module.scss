@@ -11,14 +11,13 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: var(--color-button-hover);
-  }
 
-  .button:focus {
-  outline: 2px solid var(--color-button-hover);
-  outline-offset: 2px;
-}
-  
+    &:hover {
+      background-color: var(--color-button-hover);
+    }
+
+    &:focus {
+      outline: 2px solid var(--color-button-hover);
+      outline-offset: 2px;
+    }
+  }
