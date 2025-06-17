@@ -13,6 +13,7 @@
   width: 100%;
   padding-top: env(safe-area-inset-top, 20px);
   box-sizing: border-box;
+  
 
   .nav {
     display: flex;
@@ -35,6 +36,7 @@
       margin: 0;
       color: var(--color-header-text);
       line-height: var(--header-height);
+      font-family: var(--font-caprasimo), sans-serif;
     }
     @media (max-width: 480px) {
       margin-right: auto;

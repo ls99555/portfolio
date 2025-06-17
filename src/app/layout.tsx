@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import { Roboto_Slab } from "next/font/google";
+import { Caprasimo } from "next/font/google";
+
+const caprasimo = Caprasimo({ weight: "400", subsets: ["latin"], variable: "--font-caprasimo" });
+const robotoSlab = Roboto_Slab({ subsets: ["latin"], variable: "--font-roboto-slab" });
 
 export const metadata: Metadata = {
   title: "Luke Stevens | Front-End Developer Portfolio",
@@ -47,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${caprasimo.variable} ${robotoSlab.variable}`}>
       <body>
         <Header />
         {children}

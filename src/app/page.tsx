@@ -3,6 +3,7 @@ import styles from "./page.module.scss";
 import ContactForm from "../components/contact-form";
 import WeatherWidget from "../components/weather-widget";
 import WorkCarousel from "../components/work-carousel";
+import Button from "../components/button";
 
 function Banner() {
   return (
@@ -10,8 +11,8 @@ function Banner() {
       <div className={styles.bannerText}>
         <h1>Luke Stevens</h1>
         <h2>Junior Front-End Developer</h2>
-        <p>Based in Ipswich & seeking roles in Essex, Suffolk, and London</p>
-        <p>Building accessible, responsive web apps with React & Next.js</p>
+        <p>Based in Ipswich & seeking roles in Essex, Suffolk, and London.</p>
+        <p>Building accessible, responsive web apps with React & Next.js.</p>
         <a href="#contact" className={styles.bannerCta}>
           Let’s work together!
         </a>
@@ -55,7 +56,6 @@ function AboutMe() {
         things that are useful and easy to use, and I’m excited to keep growing
         my skills in a professional environment.
       </p>
-      <CV />
     </section>
   );
 }
@@ -72,14 +72,14 @@ function Weather() {
 function CV() {
   return (
     <section id="cv" className={styles.cv}>
-      <a
+      <Button
         href="/cv.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className={styles.cvLink}
       >
         View My CV (PDF)
-      </a>
+      </Button>
     </section>
   );
 }
@@ -167,6 +167,7 @@ export default function Home() {
         <div className={styles.layoutTop}>
           <Banner />
           <AboutMe />
+          <CV />
           <TechnicalSkills />
           <SoftSkills />
           <Weather />
