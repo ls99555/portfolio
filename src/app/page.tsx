@@ -7,10 +7,29 @@ import WorkCarousel from "../components/work-carousel";
 function Banner() {
   return (
     <div className={styles.banner}>
-      <h1>Luke Stevens</h1>
+      <div className={styles.bannerText}>
+        <h1>Luke Stevens</h1>
+        <h2>Junior Front-End Developer</h2>
+        <p>Based in Ipswich & seeking roles in Essex, Suffolk, and London</p>
+        <p>Building accessible, responsive web apps with React & Next.js</p>
+        <a href="#contact" className={styles.bannerCta}>
+          Let’s work together!
+        </a>
+      </div>
+      <div className={styles.bannerImage}>
+        <Image
+          src="/profile.jpg"
+          alt="Luke Stevens"
+          width={160}
+          height={160}
+          className={styles.profilePic}
+          priority
+        />
+      </div>
     </div>
   );
 }
+
 
 function AboutMe() {
   return (
@@ -41,10 +60,9 @@ function AboutMe() {
   );
 }
 
-
 function Weather() {
   return (
-    <section className={styles.weather}> 
+    <section className={styles.weather}>
       <h2>Whats The Weather Like?</h2>
       <WeatherWidget />
     </section>
@@ -71,25 +89,19 @@ function TechnicalSkills() {
     <section className={styles.technicalSkills}>
       <h2>Technical Skills</h2>
       <ul>
-        <li>HTML & CSS</li>
-        <li>JavaScript (ES6+)</li>
-        <li>React</li>
-        <li>Next.js</li>
-        <li>TypeScript</li>
-        <li>CSS Modules</li>
-        <li>SCSS/SASS</li>
-        <li>API Integration (REST APIs, CRUD)</li>
+        <li>HTML & CSS (including SCSS/SASS)</li>
+        <li>JavaScript (ES6+), TypeScript</li>
+        <li>React & Next.js</li>
+        <li>API Integration (REST, CRUD)</li>
         <li>Responsive Design (Flexbox, Grid, Media Queries)</li>
         <li>Accessibility (ARIA, semantic HTML)</li>
         <li>Form Handling & Validation</li>
         <li>Version Control (Git & GitHub)</li>
-        <li>Node.js</li>
-        <li>Environment Variables</li>
+        <li>Node.js & Environment Variables</li>
         <li>Component-based Architecture</li>
         <li>Package Managers (npm/yarn)</li>
         <li>Command Line Usage</li>
-        <li>Build Tools (Next.js)</li>
-        <li>Deployment (Vercel)</li>
+        <li>Build Tools & Deployment (Next.js, Vercel)</li>
       </ul>
     </section>
   );
@@ -100,7 +112,7 @@ function SoftSkills() {
     <section className={styles.softSkills}>
       <h2>Soft Skills</h2>
       <ul>
-        <li>Communication</li>
+        <li>Clear Communication</li>
         <li>Teamwork & Collaboration</li>
         <li>Problem Solving</li>
         <li>Adaptability & Willingness to Learn</li>
@@ -117,7 +129,7 @@ function SoftSkills() {
 function WorkPreview() {
   return (
     <section id="work" className={styles.work}>
-      <h2>Links to my projects</h2>
+      <h2>Featured Projects</h2>
       <WorkCarousel items={workItems} />
     </section>
   );
@@ -128,13 +140,13 @@ const workItems = [
     title: "NextGenTherapy",
     image: "/images/NextGen.jpg",
     description: "A Website for a therapist I made.",
-    link: "https://next-gen-therapy-git-main-lukes-projects-f436770d.vercel.app/"
+    link: "https://next-gen-therapy-git-main-lukes-projects-f436770d.vercel.app/",
   },
   {
     title: "Project Two",
-    image: "/images/project2.png",
+    image: "/images/NextGen.jpg",
     description: "Another awesome project.",
-    link: "https://example.com/project2"
+    link: "https://example.com/project2",
   },
   // Add more items as needed
 ];
@@ -158,8 +170,6 @@ export default function Home() {
           <TechnicalSkills />
           <SoftSkills />
           <Weather />
-        </div>
-        <div className={styles.layoutBottom}>
           <WorkPreview />
           <Contact />
         </div>

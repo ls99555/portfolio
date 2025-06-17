@@ -4,7 +4,7 @@
   width: 600px;
   margin: 0 auto;
   padding: var(--spacing-large);
-  background: #fff;
+  background: var(--color-background-secondary);
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.07);
   display: flex;
@@ -26,16 +26,17 @@
     min-height: 40px;
     resize: none;
 
-    &:focus {
-      border-color: var(--color-accent);
+    &:focus,
+    &:focus-visible {
+      border-color: var(--color-accent-hover);
       outline: 2px solid var(--color-accent-hover);
       outline-offset: 2px;
     }
   }
 
   button {
-    background: var(--color-accent);
-    color: var(--color-text-secondary);
+    background: var(--color-button);
+    color: var(--color-text);
     border: none;
     border-radius: 6px;
     padding: var(--spacing-medium) var(--spacing-large);
@@ -45,17 +46,24 @@
     transition: background 0.2s;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:focus-visible {
       background: var(--color-accent-hover);
+      color: var(--color-text-secondary);
+      transition: background 0.2s;
+      outline: 2px solid var(--color-accent-hover);
+      outline-offset: 2px;
     }
   }
 }
 
+/* Form Group */
 .formGroup {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-small);
   margin-bottom: var(--spacing-medium);
+  color: var(--color-text-secondary);
 }
 
 /* Auto-grow textarea styling */
@@ -72,8 +80,9 @@
   overflow-y: auto;
   resize: none;
 
-  &:focus {
-    border-color: var(--color-accent);
+  &:focus,
+  &:focus-visible {
+    border-color: var(--color-accent-hover);
     outline: 2px solid var(--color-accent-hover);
     outline-offset: 2px;
   }
@@ -92,6 +101,7 @@
   margin-bottom: var(--spacing-small);
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .contactForm {
     width: 100%;
