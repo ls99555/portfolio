@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  background-color: var(--color-header-background);
+  background-color: var(--color-background);
   height: calc(var(--header-height) + env(safe-area-inset-top, 20px));
   color: var(--color-header-text);
   position: relative;
@@ -79,7 +79,7 @@
     margin: 0;
     padding: var(--spacing-medium);
     width: 100%;
-    background-color: var(--color-header-background);
+    background-color: var(--color-background);
     color: var(--color-header-text);
     gap: var(--spacing-medium);
     box-sizing: border-box;

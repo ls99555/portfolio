@@ -102,10 +102,38 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 802px) {
   .contactForm {
     width: 100%;
-    max-width: 300px;
+    max-width: 100%;
     padding: var(--spacing-small);
   }
 }
+
+@media (max-width: 600px) {
+  .contactForm {
+    width: 100%;
+    max-width: 100%;
+    padding: var(--spacing-xsmall);
+    border-radius: 8px;
+    box-shadow: none;
+    gap: var(--spacing-small);
+  }
+
+  .formGroup {
+    gap: var(--spacing-xsmall);
+    margin-bottom: var(--spacing-small);
+  }
+
+  .textareaAutoGrow {
+    min-height: 80px;
+    max-height: 200px;
+    padding: var(--spacing-xsmall);
+  }
+
+  button {
+    padding: var(--spacing-small) var(--spacing-medium);
+    font-size: var(--font-size-base);
+  }
+}
+

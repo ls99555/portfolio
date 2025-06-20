@@ -12,38 +12,6 @@
   background-color: var(--color-background);
 }
 
-.banner {
-  grid-column: 1 / 5; 
-  grid-row: 1 / 2;    
-  display: grid;
-  align-items: center;
-  width: 100%;
-
-  .bannerText {
-    grid-column: 2 / 3;
-  }
-
-  .bannerText p,
-  .bannerText a {
-    margin-bottom: var(--list-spacing);
-    display: block;
-  }
-
-  .bannerImage {
-    grid-column: 3 / 4;
-  }
-
-  .profilePic {
-    border-radius: 50%;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    background: #eee;
-  }
-}
-
-
 .me,
 .time,
 .weather,
@@ -65,6 +33,38 @@
 .me,
 .cv {
   margin-top: var(--spacing-layout);
+}
+
+.banner {
+  grid-column: 1 / 5; 
+  grid-row: 1 / 2;    
+  display: grid;
+  align-items: center;
+  width: 100%;
+
+  .bannerText {
+    grid-column: 2 / 3;
+    min-width: 0;
+  }
+
+  .bannerText p,
+  .bannerText a {
+    margin-bottom: var(--list-spacing);
+    display: block;
+  }
+
+  .bannerImage {
+    grid-column: 3 / 4;
+  }
+
+  .profilePic {
+    border-radius: 50%;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    background: #eee;
+  }
 }
 
 .me {
@@ -95,6 +95,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 0;
 }
 
 .work {
@@ -109,26 +110,159 @@
   text-align: center;
 }
 
+@media (max-width: 1200px) {
+  .layoutTop {
+    grid-template-columns: 40px 1fr 1fr 1fr 40px;
+    grid-template-rows: 700px 550px 560px 750px 850px;
+    gap: var(--spacing-large);
+  }
+  .profilePic {
+    max-height: 300px;
+    max-width: 300px;
+  }
+
+  .cv {
+    justify-self: center;
+  align-self: center;
+}
+}
+
+@media (max-width: 1150px) {
+  .layoutTop {
+    grid-template-columns: 40px 1fr 1fr 40px;
+    grid-template-rows: 620px 400px 60px 530px 400px 700px 800px;
+    gap: var(--spacing-medium);
+  }
+  .profilePic {
+    max-height: 250px;
+    max-width: 250px;
+  }
+ 
+ .banner {
+  grid-column: 1 / 5; 
+  grid-row: 1 / 2;
+ 
+ }
+ 
+.me {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+  margin-top: 0;
+  
+}
+
+.cv{
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+  margin-top: 0;
+}
+
+.technicalSkills {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+  text-align: center;
+}
+
+.softSkills {
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+  text-align: center;
+}
+
+.weather {
+  grid-column: 1 / 5;
+  grid-row: 5 / 6;
+  text-align: center;
+  max-width: 700px;
+  justify-self: center;
+  align-self: center;
+}
+
+.work {
+  grid-column: 1 / 5;
+  grid-row: 6 / 7;
+  text-align: center;
+  max-width: 700px;
+  justify-self: center;
+  align-self: center;
+}
+
+.contact {
+  grid-column: 1 / 5;
+  grid-row: 7 / 8;
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+  max-width: 700px;
+}
+}
+
+
+
+
+/* Tablet (≤900px) */
 @media (max-width: 900px) {
-  .layout {
-    grid-template-rows: 1000px 600px 600px 1000px;
+  .layoutTop {
+    grid-template-columns: var(--spacing-small) 1fr 1fr var(--spacing-small);
+    grid-template-rows: 800px 350px 350px 400px 400px;
+    gap: var(--spacing-small);
+    padding-left: var(--spacing-small);
+    padding-right: var(--spacing-small);
+  }
+  .profilePic {
+    width: 140px;
+    height: 140px;
   }
 }
 
-@media (max-width: 600px) {
-  .layout {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, minmax(400px, auto));
+@media (max-width: 802px) {
+  .layoutTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    // Center all children horizontally
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0;
+    gap: 0;
+    padding-left: var(--spacing-small);
+    padding-right: var(--spacing-small);
   }
+
   .banner,
   .me,
-  .timeWeather,
   .cv,
   .technicalSkills,
   .softSkills,
+  .weather,
   .work,
   .contact {
-    grid-column: 1 / 2;
-    grid-row: auto;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    margin: var(--spacing-small) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    // Center content inside each section
+    justify-content: center;
+    text-align: center;
+  }
+
+  .work,
+  .contact {
+    max-width: 600px;
+  }
+
+  .banner {
+    .bannerText,
+    .bannerImage {
+      width: 100%;
+      text-align: center;
+    }
+
+    .profilePic {
+      width: 200px;
+      height: 200px;
+      margin: var(--spacing-medium) 0;
+    }
   }
 }

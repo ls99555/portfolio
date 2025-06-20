@@ -26,15 +26,14 @@ export default function WorkCarousel({ items }: WorkCarouselProps) {
 
   return (
     <div className={styles.carousel}>
-      <Button className={styles.nav} onClick={prev} aria-label="Previous">&#8592;</Button>
       <div className={styles.slide}>
         <h3>{item.title}</h3>
         <Image
           src={item.image}
           alt={item.title}
           className={styles.image}
-          width={600} // adjust as needed
-          height={400} // adjust as needed
+          width={600}
+          height={400}
           style={{ objectFit: "cover" }}
         />
         <p>{item.description}</p>
@@ -43,8 +42,11 @@ export default function WorkCarousel({ items }: WorkCarouselProps) {
             View Project
           </a>
         )}
+        <div className={styles.carouselNavGroup}>
+          <Button className={styles.nav} onClick={prev} aria-label="Previous">&#8592;</Button>
+          <Button className={styles.nav} onClick={next} aria-label="Next">&#8594;</Button>
+        </div>
       </div>
-      <Button className={styles.nav} onClick={next} aria-label="Next">&#8594;</Button>
     </div>
   );
 }
