@@ -134,12 +134,12 @@ const workItems = [
     description: 'A Website for a therapist I made.',
     link: 'https://next-gen-therapy-git-main-lukes-projects-f436770d.vercel.app/',
   },
-  {
-    title: 'Project Two',
-    image: '/images/NextGen.jpg',
-    description: 'Another awesome project.',
-    link: 'https://example.com/project2',
-  },
+  // {
+  //   title: 'Project Two',
+  //   image: '/images/NextGen.jpg',
+  //   description: 'Another awesome project.',
+  //   link: 'https://example.com/project2',
+  // },
   // Add more items as needed
 ];
 

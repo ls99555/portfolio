@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.socialLinks}>
-        <a href="mailto:youremail@example.com" aria-label="Email">
+        <a href="mailto:luke@lstevens@dev" aria-label="Email">
           <Image src="/images/email.jpg" alt="Email" width={48} height={48} />
         </a>
         <a
