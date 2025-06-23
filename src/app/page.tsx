@@ -14,12 +14,12 @@ function Banner() {
         <p>Based in Ipswich & seeking roles in Essex, Suffolk, and London.</p>
         <p>Building accessible, responsive web apps with React & Next.js.</p>
         <a href="#contact" className={styles.bannerCta}>
-          Let’s work together!
+          Let`s work together!
         </a>
       </div>
       <div className={styles.bannerImage}>
         <Image
-          src="/profile.jpg"
+          src="/images/profile.jpg"
           alt="Luke Stevens"
           width={160}
           height={160}

@@ -102,7 +102,7 @@ export default function WeatherWidget() {
   }
 
   function getLocationMessage(location: string): string {
-    // This message is always based on user's local time
+    // This message is always based on user`s local time
     const currentHour = new Date().getHours();
     const isNight = currentHour >= 18 || currentHour < 6;
     return ` ${location} ${isNight ? "at Night" : "During the Day"}`;

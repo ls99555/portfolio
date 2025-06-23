@@ -58,12 +58,14 @@
   }
 
   .profilePic {
-    border-radius: 50%;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    background: #eee;
+  border-radius: 20%;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  width: 300px;
+  height: 400px;
+  object-fit: cover;         // Show the whole image, not cropped
+  object-position: right -5%; // Move image up/down/left/right as needed
+  background: #eee;
+ 
   }
 }
 

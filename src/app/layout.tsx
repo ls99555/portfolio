@@ -9,16 +9,24 @@ const caprasimo = Caprasimo({ weight: "400", subsets: ["latin"], variable: "--fo
 const robotoSlab = Roboto_Slab({ subsets: ["latin"], variable: "--font-roboto-slab" });
 
 export const metadata: Metadata = {
-  title: "Luke Stevens | Front-End Developer Portfolio",
+  title: "Luke Stevens | Junior Front-End Developer Portfolio",
   description:
     "Welcome to the portfolio of Luke Stevens, a junior front-end web developer based in Ipswich and actively seeking opportunities in Essex, Suffolk, and London. Explore my latest projects, technical and soft skills, work experience, and download my CV. I am passionate about building accessible, responsive, and user-friendly web applications using React, Next.js, TypeScript, and modern CSS/SCSS. Open to junior developer roles and freelance work in the UK.",
   openGraph: {
-    title: "Luke Stevens | Front-End Developer Portfolio",
+    title: "Luke Stevens | Junior Front-End Developer Portfolio",
     description:
       "Luke Stevens is a junior front-end developer based in Ipswich, looking for work in Essex, Suffolk, and London. View projects, skills, and contact details. Download CV and connect for web development opportunities.",
+    url: "https://lstevens.dev",
+    images: [
+      {
+        url: "/images/default-social-share.png",
+        width: 1200,
+        height: 630,
+        alt: "Luke Stevens Portfolio Open Graph Image",
+      },
+    ],
     type: "website",
     locale: "en_GB",
-    url: "https://lstevens.dev",
     siteName: "Luke Stevens Portfolio",
   },
   keywords: [
@@ -43,7 +51,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://lstevens.dev",
   },
-  // robots removed, handled by robots.txt in /public
 };
 
 export default function RootLayout({

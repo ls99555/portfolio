@@ -34,7 +34,7 @@
     }
   }
 
-  button {
+  .contactForm button {
     background: var(--color-button);
     color: var(--color-text);
     border: none;
@@ -131,7 +131,7 @@
     padding: var(--spacing-xsmall);
   }
 
-  button {
+  .button {
     padding: var(--spacing-small) var(--spacing-medium);
     font-size: var(--font-size-base);
   }
