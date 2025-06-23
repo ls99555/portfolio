@@ -2,50 +2,13 @@
 
 ## 🟡 Suggestions & To-Do List
 
-### 1. **SEO & Social Sharing**
-- [ ] **Add an Open Graph image** (`/public/og-image.png`) and reference it in `openGraph.images` in your metadata.
-- [ ] **Add Twitter Card metadata** for better sharing on Twitter.
-
-
-### 3. **Performance**
-- [ ] **Optimize images** (use appropriate sizes and formats).
-- [ ] **Run `npm run build` and fix any warnings or errors.**
 
 set up email for footer and contact form
 
-### 6. **Deployment**
-- [ ] **Check all environment variables** are set in Vercel (or your host).
-- [ ] **Push latest code to GitHub.**
-- [ ] **Deploy to Vercel** (recommended for Next.js).
-- [ ] **Test all links and forms on the live site.**
-
 ### 7. **Extra Polish**
-- [ ] **Add a manifest.json** for PWA support (optional).
-- [ ] **Add analytics** (Google Analytics, Plausible, etc.) if desired.
+- [ ] **Add analytics** (Google Analytics, and vercel) if desired.
 
 
-8. Security & Privacy
-<input disabled="" type="checkbox"> Review and remove any sensitive data (API keys, emails) from the codebase.
-<input disabled="" type="checkbox"> Add a privacy policy page if you use analytics or contact forms.
-9. Progressive Web App (PWA)
-<input disabled="" type="checkbox"> Test manifest.json and service worker if you want offline/PWA support.
-<input disabled="" type="checkbox"> Add theme color and background color to manifest for a better mobile experience.
-10. Code Quality
-<input disabled="" type="checkbox"> Run a linter (eslint) and formatter (prettier) to ensure code consistency.
-<input disabled="" type="checkbox"> Add basic unit or integration tests (optional, but good for future-proofing).
-11. Monitoring & Uptime
-<input disabled="" type="checkbox"> Set up uptime monitoring (e.g., UptimeRobot, Vercel Analytics) to be alerted if your site goes down.
-12. Legal
-<input disabled="" type="checkbox"> Add a copyright notice in your footer.
-<input disabled="" type="checkbox"> Add terms of use if you want extra professionalism.
-13. Contact
-<input disabled="" type="checkbox"> Test your contact form (if present) to ensure you receive messages.
-<input disabled="" type="checkbox"> Add alternative contact methods (LinkedIn, email) in case the form fails.
-14. Performance
-<input disabled="" type="checkbox"> Enable image lazy loading for large images.
-<input disabled="" type="checkbox"> Check bundle size with next build and optimize dependencies if needed.
----
-
-
-
-**Let me know if you want code snippets or help with any specific item above!**
+add privarcy policy 
+remove any api keys 
+add mail link for email and check it works
