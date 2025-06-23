@@ -14,12 +14,21 @@ interface WeatherData {
   tz_id?: string;
 }
 
+// Custom hook to check if we're on the client
+function useIsClient() {
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => setIsClient(true), []);
+  return isClient;
+}
+
 export default function WeatherWidget() {
   const [location, setLocation] = useState<string>('');
   const [weather, setWeather] = useState<WeatherData | null>(null);
   const [timezone, setTimezone] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const isClient = useIsClient();
 
   const handleSearch = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -100,48 +109,57 @@ export default function WeatherWidget() {
   }
 
   function getLocationMessage(location: string): string {
-    // This message is always based on user`s local time
     const currentHour = new Date().getHours();
     const isNight = currentHour >= 18 || currentHour < 6;
     return ` ${location} ${isNight ? 'at Night' : 'During the Day'}`;
   }
 
-  // Clock logic
-  const [now, setNow] = useState<Date>(new Date());
+  // Only render time/date on the client to avoid hydration mismatch
+  const [now, setNow] = useState<Date | null>(null);
 
   useEffect(() => {
+    if (!isClient) return;
+    setNow(new Date());
     const interval = setInterval(() => setNow(new Date()), 1000);
     return () => clearInterval(interval);
-  }, []);
+  }, [isClient]);
 
   let timeString = '';
   let dateString = '';
   let timeLabel = '';
 
-  if (timezone && weather) {
-    // Show city time
-    const cityTime = DateTime.now().setZone(timezone);
-    timeString = cityTime.toFormat('HH:mm:ss');
-    dateString = cityTime.toFormat('cccc, d LLLL yyyy');
-    timeLabel = `Time in ${weather.location}`;
-  } else {
-    // Show user local time
-    timeString = now.toLocaleTimeString([], {
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-      hour12: false,
-    });
-    dateString = DateTime.fromJSDate(now).toFormat('cccc d LLLL yyyy');
-    timeLabel = 'Your Local Time';
+  if (isClient && now) {
+    if (timezone && weather) {
+      // Show city time
+      const cityTime = DateTime.now().setZone(timezone);
+      timeString = cityTime.toFormat('HH:mm:ss');
+      dateString = cityTime.toFormat('cccc, d LLLL yyyy');
+      timeLabel = `Time in ${weather.location}`;
+    } else {
+      // Show user local time
+      timeString = now.toLocaleTimeString([], {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false,
+      });
+      dateString = DateTime.fromJSDate(now).toFormat('cccc d LLLL yyyy');
+      timeLabel = 'Your Local Time';
+    }
   }
 
   return (
     <section className={styles.weatherCard}>
       <div className={styles.clockContainer}>
-        <div className={styles.time}>{timeString}</div>
-        <div className={styles.date}>{dateString}</div>
-        <div className={styles.timeLabel}>{timeLabel}</div>
+        {isClient && now ? (
+          <>
+            <div className={styles.time}>{timeString}</div>
+            <div className={styles.date}>{dateString}</div>
+            <div className={styles.timeLabel}>{timeLabel}</div>
+          </>
+        ) : (
+          <div className={styles.timeLabel}>Loading time...</div>
+        )}
       </div>
       <p className={styles.description}>Search for the current weather conditions in your city.</p>
       <form onSubmit={handleSearch} className={styles.form}>
