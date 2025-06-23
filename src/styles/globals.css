@@ -1,8 +1,7 @@
 @import url('./variables.css');
 
 :root {
- color: var(--color-text);
- 
+  color: var(--color-text);
 }
 
 html,
@@ -16,7 +15,7 @@ body {
   font-family: var(--font-roboto-slab), serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: var(--line-height-base)
+  line-height: var(--line-height-base);
 }
 
 main {

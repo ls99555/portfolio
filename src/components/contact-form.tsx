@@ -1,56 +1,56 @@
-"use client";
+'use client';
 
-import React, { useState, useRef } from "react";
-import styles from "./contact-form.module.scss";
-import Button from "./button";
+import React, { useState, useRef } from 'react';
+import styles from './contact-form.module.scss';
+import Button from './button';
 
 export default function ContactForm() {
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const messageRef = useRef<HTMLTextAreaElement>(null);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setStatus("idle");
+    setStatus('idle');
     const form = event.currentTarget;
     const formData = {
-      firstName: (form.elements.namedItem("firstName") as HTMLInputElement).value,
-      lastName: (form.elements.namedItem("lastName") as HTMLInputElement).value,
-      email: (form.elements.namedItem("email") as HTMLInputElement).value,
-      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+      firstName: (form.elements.namedItem('firstName') as HTMLInputElement).value,
+      lastName: (form.elements.namedItem('lastName') as HTMLInputElement).value,
+      email: (form.elements.namedItem('email') as HTMLInputElement).value,
+      message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
     };
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
       if (res.ok) {
-        setStatus("success");
+        setStatus('success');
         form.reset();
-        if (messageRef.current) messageRef.current.style.height = "auto";
+        if (messageRef.current) messageRef.current.style.height = 'auto';
       } else {
-        setStatus("error");
+        setStatus('error');
       }
     } catch {
-      setStatus("error");
+      setStatus('error');
     }
   };
 
   const handleMessageInput = () => {
     const textarea = messageRef.current;
     if (textarea) {
-      textarea.style.height = "auto";
-      textarea.style.height = textarea.scrollHeight + "px";
+      textarea.style.height = 'auto';
+      textarea.style.height = textarea.scrollHeight + 'px';
     }
   };
 
   return (
     <form className={styles.contactForm} onSubmit={handleSubmit}>
-      {status === "success" && (
+      {status === 'success' && (
         <div className={styles.statusSuccess}>Thank you! Your message has been sent.</div>
       )}
-      {status === "error" && (
+      {status === 'error' && (
         <div className={styles.statusError}>Sorry, something went wrong. Please try again.</div>
       )}
       <div className={styles.formGroup}>

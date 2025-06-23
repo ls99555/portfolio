@@ -1,5 +1,5 @@
-import Link from "next/link";
-import styles from "./button.module.scss";
+import Link from 'next/link';
+import styles from './button.module.scss';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
@@ -9,18 +9,11 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
 }
 
-export default function Button({
-  href,
-  children,
-  target,
-  rel,
-  className,
-  ...props
-}: ButtonProps) {
+export default function Button({ href, children, target, rel, className, ...props }: ButtonProps) {
   // Internal link (Next.js routing)
-  if (href && href.startsWith("/")) {
+  if (href && href.startsWith('/')) {
     return (
-      <Link href={href} className={`${styles.button} ${className || ""}`}>
+      <Link href={href} className={`${styles.button} ${className || ''}`}>
         {children}
       </Link>
     );
@@ -31,9 +24,9 @@ export default function Button({
     return (
       <a
         href={href}
-        className={`${styles.button} ${className || ""}`}
-        target={target || "_blank"}
-        rel={rel || "noopener noreferrer"}
+        className={`${styles.button} ${className || ''}`}
+        target={target || '_blank'}
+        rel={rel || 'noopener noreferrer'}
       >
         {children}
       </a>
@@ -42,7 +35,7 @@ export default function Button({
 
   // Regular button
   return (
-    <button className={`${styles.button} ${className || ""}`} {...props}>
+    <button className={`${styles.button} ${className || ''}`} {...props}>
       {children}
     </button>
   );

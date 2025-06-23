@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useState, useEffect, useRef } from "react";
-import styles from "./header.module.scss";
+import { useState, useEffect, useRef } from 'react';
+import styles from './header.module.scss';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,8 +16,8 @@ export default function Header() {
         closeMenu();
       }
     };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   return (
@@ -36,11 +36,7 @@ export default function Header() {
         >
           ☰
         </button>
-        <ul
-          className={`${styles.navList} ${
-            isMenuOpen ? styles.navListOpen : ""
-          }`}
-        >
+        <ul className={`${styles.navList} ${isMenuOpen ? styles.navListOpen : ''}`}>
           <li className={styles.navItem}>
             <a href="#contact" onClick={closeMenu}>
               Contact Me

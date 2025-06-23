@@ -1,47 +1,44 @@
 :root {
   /* background colors*/
-   --color-background: #000000;
-   --color-background-secondary: #ffffff;
+  --color-background: #000000;
+  --color-background-secondary: #ffffff;
 
-   /* text colors*/
-    --color-text: #efecec; 
-    --color-text-secondary: #000000;
-    
+  /* text colors*/
+  --color-text: #efecec;
+  --color-text-secondary: #000000;
 
-    /* Button colors*/
-    --color-button: #164B39;
-    --color-button-hover: #d8995edc;
-    --color-button-accent: #dbbfa4; 
-    --color-button-home: #DC7726;
-    --color-button-home-hover: #4A545D;
-    ; 
-  
-    /* Spacing Variables */
-    --spacing-small: 12px;
-    --spacing-medium: 20px;
-    --spacing-large: 25px;
-    --spacing-layout: 80px;
-    
-    --header-height: 100px;
-    --footer-height: 200px;
-  
-    /* Readability */
-    --line-height-base: 1.6;
-    --paragraph-spacing: 1.2em;
-    --list-spacing: 6px;
-    
-    /* Font sizes */
-    --font-size-h1: 2.5rem;
-    --font-size-h2: 2rem;
-    --font-size-h3: 1.5rem;
-    --font-size-h4: 1.25rem;
-    --font-size-h5: 1rem;
-    --font-size-h6: 0.875rem;
-    --font-size-base: 1rem;
-    --font-size-large: 20px;
-    --font-size-logo: 35px;
-    
-    /* hover*/
-    --color-accent: #164B39;
-    --color-accent-hover: #d8995edc;
-  }
+  /* Button colors*/
+  --color-button: #164b39;
+  --color-button-hover: #d8995edc;
+  --color-button-accent: #dbbfa4;
+  --color-button-home: #dc7726;
+  --color-button-home-hover: #4a545d;
+  /* Spacing Variables */
+  --spacing-small: 12px;
+  --spacing-medium: 20px;
+  --spacing-large: 25px;
+  --spacing-layout: 80px;
+
+  --header-height: 100px;
+  --footer-height: 200px;
+
+  /* Readability */
+  --line-height-base: 1.6;
+  --paragraph-spacing: 1.2em;
+  --list-spacing: 6px;
+
+  /* Font sizes */
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.5rem;
+  --font-size-h4: 1.25rem;
+  --font-size-h5: 1rem;
+  --font-size-h6: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-large: 20px;
+  --font-size-logo: 35px;
+
+  /* hover*/
+  --color-accent: #164b39;
+  --color-accent-hover: #d8995edc;
+}

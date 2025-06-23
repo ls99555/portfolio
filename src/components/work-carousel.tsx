@@ -1,9 +1,9 @@
-"use client"
+'use client';
 
-import React, { useState } from "react";
-import Image from "next/image";
-import styles from "./work-carousel.module.scss";
-import Button from "./button";
+import React, { useState } from 'react';
+import Image from 'next/image';
+import styles from './work-carousel.module.scss';
+import Button from './button';
 
 interface WorkItem {
   title: string;
@@ -34,7 +34,7 @@ export default function WorkCarousel({ items }: WorkCarouselProps) {
           className={styles.image}
           width={600}
           height={400}
-          style={{ objectFit: "cover" }}
+          style={{ objectFit: 'cover' }}
         />
         <p>{item.description}</p>
         {item.link && (
@@ -43,8 +43,12 @@ export default function WorkCarousel({ items }: WorkCarouselProps) {
           </a>
         )}
         <div className={styles.carouselNavGroup}>
-          <Button className={styles.nav} onClick={prev} aria-label="Previous">&#8592;</Button>
-          <Button className={styles.nav} onClick={next} aria-label="Next">&#8594;</Button>
+          <Button className={styles.nav} onClick={prev} aria-label="Previous">
+            &#8592;
+          </Button>
+          <Button className={styles.nav} onClick={next} aria-label="Next">
+            &#8594;
+          </Button>
         </div>
       </div>
     </div>
