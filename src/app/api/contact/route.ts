@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
 
     await resend.emails.send({
       from: 'Contact Form <onboarding@resend.dev>', // Use your verified sender for production
-      to: 'andreeatherapytoday@gmail.com',
+      to: 'l.stevens1995@hotmail.com',
       subject: `Contact Form Submission from ${firstName} ${lastName}`,
       replyTo: email,
       text: message,
