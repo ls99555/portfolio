@@ -19,9 +19,9 @@ export async function POST(req: NextRequest) {
     await resend.emails.send({
       from: 'Contact Form <luke@lstevens.dev>',
       to: 'luke@lstevens.dev',
-      subject: `Contact Form Submission from ${firstName} ${lastName}`,
+      subject: `Contact Form Submission from ${firstName} ${lastName} <${email}>`,
       replyTo: email,
-      text: message,
+      text: `From: ${firstName} ${lastName} <${email}>\n\n${message}`,
     });
 
     return NextResponse.json({ success: true });
