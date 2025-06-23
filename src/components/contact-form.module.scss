@@ -118,25 +118,25 @@
   .contactForm {
     width: 100%;
     max-width: 100%;
-    padding: var(--spacing-xsmall);
+    padding: var(--spacing-small);
     border-radius: 8px;
     box-shadow: none;
     gap: var(--spacing-small);
   }
 
   .formGroup {
-    gap: var(--spacing-xsmall);
+    gap: var(--spacing-small);
     margin-bottom: var(--spacing-small);
   }
 
   .textareaAutoGrow {
     min-height: 80px;
     max-height: 200px;
-    padding: var(--spacing-xsmall);
+    padding: var(--spacing-small);
   }
 
   .button {
-    padding: var(--spacing-small) var(--spacing-medium);
+    padding: var(--spacing-large);
     font-size: var(--font-size-base);
   }
 }
