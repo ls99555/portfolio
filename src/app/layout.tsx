@@ -7,6 +7,7 @@ import SkipNavigation from '../components/skip-navigation';
 import BackToTop from '../components/back-to-top';
 import ErrorBoundary from '../components/error-boundary';
 import GoogleAnalytics from '../components/google-analytics';
+import CookieNotice from '../components/cookie-notice';
 import { getPublicEnvironmentVariables } from '../utils/env';
 import { Roboto_Slab } from 'next/font/google';
 import { Caprasimo } from 'next/font/google';
@@ -124,6 +125,7 @@ export default function RootLayout({
           </main>
           <Footer />
           <BackToTop />
+          <CookieNotice />
         </ErrorBoundary>
       </body>
     </html>

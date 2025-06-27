@@ -12,6 +12,10 @@
   --color-button-hover: #d8995edc;
   --color-button-accent: #dbbfa4;
 
+  /* Link colors */
+  --color-link: #164b39;
+  --color-link-hover: #d8995edc;
+
   /* Spacing Variables */
   --spacing-xs: 4px;
   --spacing-small: 12px;

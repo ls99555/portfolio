@@ -1,0 +1,117 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-large);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.content {
+  background: var(--color-background);
+  padding: var(--spacing-extra-large);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-medium);
+}
+
+.content h1 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-medium);
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.content h2 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  margin-top: var(--spacing-large);
+  margin-bottom: var(--spacing-medium);
+  font-size: 1.8rem;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: var(--spacing-small);
+}
+
+.content h3 {
+  font-family: var(--font-heading);
+  color: var(--color-secondary);
+  margin-top: var(--spacing-medium);
+  margin-bottom: var(--spacing-small);
+  font-size: 1.3rem;
+}
+
+.lastUpdated {
+  text-align: center;
+  font-style: italic;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-large);
+  padding-bottom: var(--spacing-medium);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.section {
+  margin-bottom: var(--spacing-large);
+}
+
+.section p {
+  margin-bottom: var(--spacing-medium);
+}
+
+.section ul {
+  margin-left: var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
+}
+
+.section li {
+  margin-bottom: var(--spacing-small);
+}
+
+.section ul ul {
+  margin-top: var(--spacing-small);
+  margin-left: var(--spacing-medium);
+}
+
+.content :global(strong) {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.content :global(a) {
+  color: var(--color-link);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.content :global(a:hover) {
+  color: var(--color-link-hover);
+  text-decoration: none;
+}
+
+.homeButton {
+  text-align: center;
+  margin-top: var(--spacing-extra-large);
+  padding-top: var(--spacing-large);
+  border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-medium);
+  }
+  
+  .content {
+    padding: var(--spacing-large);
+  }
+  
+  .content h1 {
+    font-size: 2rem;
+  }
+  
+  .content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .content h3 {
+    font-size: 1.2rem;
+  }
+}

@@ -27,6 +27,8 @@ export default function Footer() {
       </div>
       <div className={styles.copyright}>
         © {new Date().getFullYear()} Luke Stevens. All rights reserved.
+        <span className={styles.separator}>•</span>
+        <a href="/privacy" className={styles.privacyLink}>Privacy Policy</a>
       </div>
     </footer>
   );
