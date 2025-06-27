@@ -1,14 +1,1 @@
-
-
-## 🟡 Suggestions & To-Do List
-
-
-set up email for footer and contact form
-
-### 7. **Extra Polish**
-- [ ] **Add analytics** (Google Analytics, and vercel) if desired.
-
-
-add privarcy policy 
-remove any api keys 
-add mail link for email and check it works
+add better color styling rather than just black
