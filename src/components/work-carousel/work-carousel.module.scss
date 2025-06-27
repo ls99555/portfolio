@@ -14,9 +14,10 @@
   text-align: center;
   width: 600px;
   max-width: 90vw;
-  min-height: 600px; // Ensures consistent carousel height
+  min-height: 650px; // Increased height to accommodate tech badges
   display: flex;
   flex-direction: column;
+  justify-content: space-between; // Distribute space evenly
 }
 
 .image {
@@ -69,7 +70,7 @@
   flex-direction: row;
   justify-content: center;
   gap: var(--spacing-small);
-  margin-top: var(--spacing-small);
+  margin: 0; // Remove margin since it's now controlled by slideFooter gap
 }
 
 .link {
@@ -92,6 +93,9 @@
   gap: 8px;
   justify-content: center;
   margin: var(--spacing-small) 0;
+  min-height: 80px; // Fixed height to prevent layout shift
+  align-items: flex-start;
+  align-content: flex-start; // Align wrapped items to the top
 }
 
 .techBadge {
@@ -109,7 +113,21 @@
   gap: var(--spacing-large);
   justify-content: center;
   flex-wrap: wrap;
-  margin: var(--spacing-small) 0;
+  margin: 0; // Remove margin since it's now controlled by slideFooter gap
+}
+
+.slideContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.slideFooter {
+  margin-top: auto; // Push footer to bottom
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
 }
 
 /* Tablet */

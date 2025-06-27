@@ -14,7 +14,7 @@ function Banner() {
         <h2>Electrician Turned Developer</h2>
         <p>12 years of problem-solving experience, now building digital solutions.</p>
         <p>Ready to contribute to your team with React, Next.js & TypeScript.</p>
-        <p className={styles.availability}>📍 Essex, Suffolk & London • ✅ Available for immediate start</p>
+        <p>Essex, Suffolk & London.📍</p>
         <a href="#contact" className={styles.bannerCta}>
           Ready to contribute to your team
         </a>
@@ -142,7 +142,6 @@ function Contact() {
             </div>
           </div>
         </div>
-        
         <div className={styles.contactForm}>
           <ContactForm />
         </div>
