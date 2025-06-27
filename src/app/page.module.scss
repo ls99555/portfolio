@@ -10,6 +10,8 @@
   margin-bottom: var(--spacing-layout);
   color: var(--color-text);
   background-color: var(--color-background);
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .weather,
