@@ -1,0 +1,20 @@
+{
+  "name": "Luke Stevens Portfolio",
+  "short_name": "Luke Dev",
+  "description": "Junior front-end developer from Ipswich seeking opportunities in Essex, Suffolk & London",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#164b39",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["portfolio", "developer", "business"],
+  "lang": "en-GB",
+  "scope": "/",
+  "orientation": "portrait-primary"
+}

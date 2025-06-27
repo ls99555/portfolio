@@ -5,6 +5,7 @@
 interface EnvironmentVariables {
   NEXT_PUBLIC_WEATHER_API_KEY: string;
   RESEND_API_KEY: string;
+  NEXT_PUBLIC_GA_MEASUREMENT_ID?: string;
   // Add other env vars as needed
 }
 
@@ -12,6 +13,7 @@ function validateEnvironmentVariables(): EnvironmentVariables {
   const requiredVars = {
     NEXT_PUBLIC_WEATHER_API_KEY: process.env.NEXT_PUBLIC_WEATHER_API_KEY,
     RESEND_API_KEY: process.env.RESEND_API_KEY,
+    NEXT_PUBLIC_GA_MEASUREMENT_ID: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
   };
 
   const missingVars = Object.entries(requiredVars)
@@ -41,5 +43,6 @@ export function getEnvironmentVariables(): EnvironmentVariables {
 export function getPublicEnvironmentVariables() {
   return {
     WEATHER_API_KEY: process.env.NEXT_PUBLIC_WEATHER_API_KEY || '',
+    GA_MEASUREMENT_ID: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || '',
   };
 }

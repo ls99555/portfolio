@@ -1,5 +1,5 @@
 export default function StructuredData() {
-  const structuredData = {
+  const personStructuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Luke Stevens",
@@ -7,6 +7,10 @@ export default function StructuredData() {
     "description": "Passionate front-end developer based in Ipswich, seeking opportunities in Essex, Suffolk, and London",
     "url": "https://lstevens.dev",
     "image": "https://lstevens.dev/images/profile.jpg",
+    "sameAs": [
+      "https://github.com/ls99555",
+      "https://linkedin.com/in/luke-stevens-dev"
+    ],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Ipswich",
@@ -24,28 +28,39 @@ export default function StructuredData() {
       "Responsive Design",
       "Web Accessibility",
       "Git",
-      "Node.js"
+      "Node.js",
+      "API Integration",
+      "Component Architecture"
     ],
-    "alumniOf": "Codecademy",
-    "seeks": {
-      "@type": "JobPosting",
-      "title": "Junior Front-End Developer",
-      "employmentType": "FULL_TIME",
-      "jobLocation": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "addressRegion": "Essex, Suffolk, London",
-          "addressCountry": "UK"
-        }
-      }
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Codecademy"
     }
   };
 
+  const websiteStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Luke Stevens Portfolio",
+    "url": "https://lstevens.dev",
+    "description": "Portfolio website of Luke Stevens, junior front-end developer",
+    "author": {
+      "@type": "Person",
+      "name": "Luke Stevens"
+    },
+    "inLanguage": "en-GB"
+  };
+
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personStructuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteStructuredData) }}
+      />
+    </>
   );
 }
