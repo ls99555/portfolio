@@ -18,21 +18,29 @@ export const SITE_CONFIG = {
 
 export const WORK_ITEMS: WorkItem[] = [
   {
-    title: 'NextGenTherapy',
-    image: '/images/NextGen.jpg',
-    description: 'Professional therapy website with booking system, SEO optimization, and Google Analytics integration.',
-    technologies: ['Next.js', 'React', 'CSS Modules', 'Google Analytics', 'JSON-LD', 'Vercel'],
-    link: 'https://next-gen-therapy-git-main-lukes-projects-f436770d.vercel.app/',
-    githubLink: 'https://github.com/ls99555',
+    title: 'Portfolio Website',
+    image: '/images/portfolio-screenshot.png',
+    description: 'Responsive portfolio showcasing modern web development skills. Built with Next.js 14, TypeScript, and advanced CSS. Features include Google Analytics, contact form integration, and comprehensive SEO.',
+    technologies: ['Next.js 14', 'TypeScript', 'SCSS', 'Google Analytics', 'Resend API'],
+    link: 'https://lstevens.dev',
+    githubLink: 'https://github.com/ls99555/portfolio'
   },
   {
-    title: 'Weather App',
-    image: '/images/weather-app.jpg',
-    description: 'Modern weather application with OpenWeatherMap API, dark/light themes, and real-time data.',
-    technologies: ['Next.js', 'TypeScript', 'OpenWeather API', 'CSS Modules', 'Dark Mode', 'Vercel'],
-    link: 'https://weather-app-one-tau-91.vercel.app/',
-    githubLink: 'https://github.com/ls99555',
+    title: 'Weather Dashboard',
+    image: '/images/weather-app.png',
+    description: 'Real-time weather application with location search and detailed forecasts. Integrates OpenWeatherMap API with responsive design and error handling.',
+    technologies: ['Next.js', 'TypeScript', 'OpenWeather API', 'Luxon', 'CSS Modules'],
+    link: 'https://whatstheweatherlike-eight.vercel.app/',
+    githubLink: 'https://github.com/ls99555/whatstheweatherlike'
   },
+  {
+    title: 'NextGen Therapy',
+    image: '/images/nextgen-therapy.png',
+    description: 'Professional therapy practice website with modern design and optimized user experience. Features responsive layout and performance optimization.',
+    technologies: ['Next.js', 'React', 'CSS Modules', 'SEO Optimization', 'Responsive Design'],
+    link: 'https://nextgentherapy.vercel.app/',
+    githubLink: 'https://github.com/ls99555/nextgen-therapy'
+  }
 ] as const;
 
 export const TECHNICAL_SKILLS = [

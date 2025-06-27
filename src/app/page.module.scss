@@ -53,6 +53,13 @@
     display: block;
   }
 
+  .availability {
+    font-size: 0.9rem !important;
+    color: var(--color-accent) !important;
+    font-weight: 600 !important;
+    margin: var(--spacing-small) 0 !important;
+  }
+
   .bannerImage {
     grid-column: 3 / 4;
   }
@@ -71,6 +78,30 @@
 .me {
   grid-column: 2 / 4;
   grid-row: 2 / 3;
+}
+
+.aboutMe {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+}
+
+.aboutContent {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.aboutText {
+  text-align: left;
+  line-height: 1.7;
+  
+  p {
+    margin-bottom: var(--spacing-medium);
+    color: var(--color-text);
+  }
+  
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .technicalSkills {
@@ -111,6 +142,53 @@
   text-align: center;
 }
 
+.contactContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-extra-large);
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.contactInfo {
+  text-align: left;
+  
+  h3 {
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-medium);
+    font-family: var(--font-heading);
+  }
+  
+  p {
+    margin-bottom: var(--spacing-medium);
+    line-height: 1.6;
+  }
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+  margin-top: var(--spacing-medium);
+}
+
+.contactItem {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  text-align: left;
+  
+  strong {
+    color: var(--color-accent);
+  }
+}
+
+.contactForm {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 @media (max-width: 1200px) {
   .layoutTop {
     grid-template-columns: 40px 1fr 1fr 1fr 40px;
@@ -144,7 +222,8 @@
     grid-row: 1 / 2;
   }
 
-  .me {
+  .me,
+  .aboutMe {
     grid-column: 2 / 4;
     grid-row: 2 / 3;
     margin-top: 0;
@@ -194,6 +273,20 @@
     align-self: center;
     max-width: 700px;
   }
+  
+  .contactContent {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-large);
+    text-align: center;
+  }
+  
+  .contactInfo {
+    text-align: center;
+  }
+  
+  .contactItem {
+    text-align: center;
+  }
 }
 
 /* Tablet (≤900px) */
@@ -226,6 +319,7 @@
 
   .banner,
   .me,
+  .aboutMe,
   .cv,
   .technicalSkills,
   .softSkills,
@@ -246,6 +340,16 @@
   .work,
   .contact {
     max-width: 600px;
+  }
+  
+  .contactContent {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-medium);
+  }
+  
+  .contactInfo,
+  .contactItem {
+    text-align: center;
   }
 
   .banner {
