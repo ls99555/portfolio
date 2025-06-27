@@ -125,6 +125,7 @@ function Contact() {
   return (
     <section id="contact" className={styles.contact} aria-labelledby="contact-heading">
       <h2>Let's Work Together</h2>
+      
       <div className={styles.contactContent}>
         <div className={styles.contactInfo}>
           <h3>Ready to Join Your Team</h3>
@@ -138,10 +139,11 @@ function Contact() {
               <strong>📞 Availability:</strong> Mon-Fri, 9am-5pm for calls
             </div>
             <div className={styles.contactItem}>
-              <strong>📍 Location:</strong> Happy to work hybrid, remote, or in-office
+              <strong>📍 Location:</strong> Happy to work in-office, hybrid, or remote
             </div>
           </div>
         </div>
+        
         <div className={styles.contactForm}>
           <ContactForm />
         </div>
