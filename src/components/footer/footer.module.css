@@ -63,7 +63,7 @@
 .privacyLink:hover,
 .privacyLink:focus {
   color: var(--color-link-hover);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* Responsive */
