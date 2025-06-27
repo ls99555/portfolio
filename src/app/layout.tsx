@@ -3,6 +3,7 @@ import '../styles/globals.css';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import StructuredData from '../components/structured-data';
+import SkipNavigation from '../components/skip-navigation';
 import { Roboto_Slab } from 'next/font/google';
 import { Caprasimo } from 'next/font/google';
 
@@ -66,8 +67,11 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body>
+        <SkipNavigation />
         <Header />
-        {children}
+        <main id="main-content" tabIndex={-1}>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
