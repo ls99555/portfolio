@@ -1,22 +1,19 @@
 .layoutTop {
   display: grid;
   grid-template-columns: 100px 1fr 1fr 1fr 100px;
-  grid-template-rows: 790px 550px 550px 750px 850px;
+  grid-template-rows: 790px auto auto auto auto;
   width: 100vw;
   max-width: 100vw;
   margin: 0;
   box-sizing: border-box;
-  gap: var(--spacing-large);
+  gap: var(--spacing-layout);
   margin-bottom: var(--spacing-layout);
   color: var(--color-text);
   background-color: var(--color-background);
 }
 
-.me,
-.time,
 .weather,
 .cv,
-.skills,
 .work,
 .contact,
 .softSkills,
@@ -28,11 +25,6 @@
   word-break: break-word;
   padding: var(--spacing-medium);
   border-radius: 20px;
-}
-
-.me,
-.cv {
-  margin-top: var(--spacing-layout);
 }
 
 .banner {
@@ -75,11 +67,6 @@
   }
 }
 
-.me {
-  grid-column: 2 / 4;
-  grid-row: 2 / 3;
-}
-
 .aboutMe {
   grid-column: 2 / 4;
   grid-row: 2 / 3;
@@ -93,12 +80,12 @@
 .aboutText {
   text-align: left;
   line-height: 1.7;
-  
+
   p {
     margin-bottom: var(--spacing-medium);
     color: var(--color-text);
   }
-  
+
   p:last-child {
     margin-bottom: 0;
   }
@@ -143,7 +130,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-extra-large);
 }
 
 .contactContent {
@@ -153,18 +139,19 @@
   gap: var(--spacing-extra-large);
   width: 100%;
   max-width: 800px;
+  margin-top: var(--spacing-large);
 }
 
 .contactInfo {
   text-align: center;
   max-width: 600px;
-  
+
   h3 {
     color: var(--color-accent);
     margin-bottom: var(--spacing-medium);
     font-family: var(--font-heading);
   }
-  
+
   p {
     margin-bottom: var(--spacing-medium);
     line-height: 1.6;
@@ -176,16 +163,13 @@
   flex-direction: column;
   gap: var(--spacing-small);
   margin-top: var(--spacing-medium);
+  margin-bottom: var(--spacing-large);
 }
 
 .contactItem {
   font-size: 0.95rem;
   color: var(--color-text);
   text-align: center;
-  
-  strong {
-    color: var(--color-accent);
-  }
 }
 
 .contactForm {
@@ -198,7 +182,7 @@
 @media (max-width: 1200px) {
   .layoutTop {
     grid-template-columns: 40px 1fr 1fr 1fr 40px;
-    grid-template-rows: 700px 550px 560px 750px 850px;
+    grid-template-rows: 700px auto auto auto auto;
     gap: var(--spacing-large);
   }
   .profilePic {
@@ -215,7 +199,7 @@
 @media (max-width: 1150px) {
   .layoutTop {
     grid-template-columns: 40px 1fr 1fr 40px;
-    grid-template-rows: 620px 400px 60px 530px 400px 700px 800px;
+    grid-template-rows: 620px auto auto auto auto auto auto;
     gap: var(--spacing-medium);
   }
   .profilePic {
@@ -228,7 +212,6 @@
     grid-row: 1 / 2;
   }
 
-  .me,
   .aboutMe {
     grid-column: 2 / 4;
     grid-row: 2 / 3;
@@ -285,7 +268,7 @@
 @media (max-width: 900px) {
   .layoutTop {
     grid-template-columns: var(--spacing-small) 1fr 1fr var(--spacing-small);
-    grid-template-rows: 800px 350px 350px 400px 400px;
+    grid-template-rows: 800px auto auto auto auto;
     gap: var(--spacing-small);
     padding-left: var(--spacing-small);
     padding-right: var(--spacing-small);
@@ -310,7 +293,6 @@
   }
 
   .banner,
-  .me,
   .aboutMe,
   .cv,
   .technicalSkills,
@@ -333,7 +315,7 @@
   .contact {
     max-width: 600px;
   }
-  
+
   .contactInfo,
   .contactItem {
     text-align: center;

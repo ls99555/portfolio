@@ -40,26 +40,33 @@ function AboutMe() {
       <div className={styles.aboutContent}>
         <div className={styles.aboutText}>
           <p>
-            I'm Luke Stevens, a passionate front-end developer who made the leap from 12 years as an electrician to coding. 
-            The moment I wrote my first line of code, I knew I'd found my calling – the same satisfaction I got from solving complex electrical problems, but with endless creative possibilities.
+            I'm Luke Stevens, a passionate front-end developer who made the leap from 12 years as an
+            electrician to coding. The moment I wrote my first line of code, I knew I'd found my
+            calling – the same satisfaction I got from solving complex electrical problems, but with
+            endless creative possibilities.
           </p>
           <p>
-            My electrical background gives me a unique perspective on development. I'm used to working with complex systems, 
-            following strict standards (electrical codes = coding standards), and ensuring everything works safely and reliably. 
-            I approach debugging the same way I approached electrical troubleshooting – methodically, patiently, and with attention to detail.
+            My electrical background gives me a unique perspective on development. I'm used to
+            working with complex systems, following strict standards (electrical codes = coding
+            standards), and ensuring everything works safely and reliably. I approach debugging the
+            same way I approached electrical troubleshooting – methodically, patiently, and with
+            attention to detail.
           </p>
           <p>
-            I've recently completed comprehensive front-end and Next.js courses with Codecademy, and I've learned that problem-solving 
-            is universal – whether it's diagnosing a faulty circuit or fixing a React component, the logical thinking is the same.
+            I've recently completed comprehensive front-end and Next.js courses with Codecademy, and
+            I've learned that problem-solving is universal – whether it's diagnosing a faulty
+            circuit or fixing a React component, the logical thinking is the same.
           </p>
           <p>
-            I'm used to working in fast-paced environments where safety and quality are paramount. I'm eager to bring this work ethic 
-            to a development team and continue growing my skills. Currently exploring TypeScript advanced patterns and always excited 
-            to learn new technologies.
+            I'm used to working in fast-paced environments where safety and quality are paramount.
+            I'm eager to bring this work ethic to a development team and continue growing my skills.
+            Currently exploring TypeScript advanced patterns and always excited to learn new
+            technologies.
           </p>
           <p>
-            I'm excited to contribute to meaningful projects and join a supportive development team where I can grow while adding value 
-            from day one. Available for immediate start and happy to work hybrid, remote, or in-office in Essex, Suffolk, and London.
+            I'm excited to contribute to meaningful projects and join a supportive development team
+            where I can grow while adding value from day one. Available for immediate start and
+            happy to work hybrid, remote, or in-office in Essex, Suffolk, and London.
           </p>
         </div>
       </div>
@@ -125,12 +132,15 @@ function Contact() {
   return (
     <section id="contact" className={styles.contact} aria-labelledby="contact-heading">
       <h2>Let's Work Together</h2>
-      
+
       <div className={styles.contactContent}>
         <div className={styles.contactInfo}>
           <h3>Ready to Join Your Team</h3>
-          <p>I'm actively seeking my first role as a front-end developer and excited to contribute to meaningful projects.</p>
-          
+          <p>
+            I'm actively seeking my first role as a front-end developer and excited to contribute to
+            meaningful projects.
+          </p>
+
           <div className={styles.contactDetails}>
             <div className={styles.contactItem}>
               <strong>📧 Response Time:</strong> Usually within 24 hours
@@ -143,7 +153,7 @@ function Contact() {
             </div>
           </div>
         </div>
-        
+
         <div className={styles.contactForm}>
           <ContactForm />
         </div>
