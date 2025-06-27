@@ -113,11 +113,6 @@ li {
     z-index: 9999;
     pointer-events: none;
   }
-  
-  /* Override any potential green backgrounds but preserve intentional button/accent colors */
-  :not(button):not(.button):not([class*="button"]):not([class*="accent"]):not([style*="background"]) {
-    background-color: transparent !important;
-  }
 }
 
 /* iPhone safe area fixes - prevent green background in notch area */
