@@ -1,11 +1,14 @@
+import React from 'react';
 import Image from 'next/image';
 import styles from './page.module.scss';
 import ContactForm from '../components/contact-form';
 import WeatherWidget from '../components/weather-widget';
 import WorkCarousel from '../components/work-carousel';
 import Button from '../components/button';
+import { WORK_ITEMS, TECHNICAL_SKILLS, SOFT_SKILLS } from '../config/constants';
+import type { WorkItem } from '../types';
 
-function Banner() {
+const Banner = React.memo(function Banner() {
   return (
     <div className={styles.banner}>
       <div className={styles.bannerText}>
@@ -29,12 +32,12 @@ function Banner() {
       </div>
     </div>
   );
-}
+});
 
-function AboutMe() {
+const AboutMe = React.memo(function AboutMe() {
   return (
-    <section className={styles.me}>
-      <h2>From Electrician to Developer</h2>
+    <section className={styles.me} aria-labelledby="about-heading">
+      <h2 id="about-heading">From Electrician to Developer</h2>
       <p>
         Hi, I'm Luke Stevens. I'm passionate about web development and am excited to start my career
         as a front-end developer. I've recently completed the Codecademy Front-End Development and
@@ -55,7 +58,7 @@ function AboutMe() {
       </p>
     </section>
   );
-}
+});
 
 function Weather() {
   return (
@@ -76,85 +79,49 @@ function CV() {
   );
 }
 
-function TechnicalSkills() {
+const TechnicalSkills = React.memo(function TechnicalSkills() {
   return (
-    <section className={styles.technicalSkills}>
-      <h2>Technical Skills</h2>
-      <ul>
-        <li>HTML & CSS (including SCSS/SASS)</li>
-        <li>JavaScript (ES6+), TypeScript</li>
-        <li>React & Next.js</li>
-        <li>API Integration (REST, CRUD)</li>
-        <li>Responsive Design (Flexbox, Grid, Media Queries)</li>
-        <li>Accessibility (ARIA, semantic HTML)</li>
-        <li>Form Handling & Validation</li>
-        <li>Version Control (Git & GitHub)</li>
-        <li>Node.js & Environment Variables</li>
-        <li>Component-based Architecture</li>
-        <li>Package Managers (npm/yarn)</li>
-        <li>Command Line Usage</li>
-        <li>Build Tools & Deployment (Next.js, Vercel)</li>
+    <section className={styles.technicalSkills} aria-labelledby="technical-skills-heading">
+      <h2 id="technical-skills-heading">Technical Skills</h2>
+      <ul role="list">
+        {TECHNICAL_SKILLS.map((skill, index) => (
+          <li key={index}>{skill}</li>
+        ))}
       </ul>
     </section>
   );
-}
+});
 
-function SoftSkills() {
+const SoftSkills = React.memo(function SoftSkills() {
   return (
-    <section className={styles.softSkills}>
-      <h2>Soft Skills</h2>
-      <ul>
-        <li>Clear Communication</li>
-        <li>Teamwork & Collaboration</li>
-        <li>Problem Solving</li>
-        <li>Adaptability & Willingness to Learn</li>
-        <li>Attention to Detail</li>
-        <li>Time Management</li>
-        <li>Receiving & Acting on Feedback</li>
-        <li>Proactive Attitude</li>
-        <li>Critical Thinking</li>
+    <section className={styles.softSkills} aria-labelledby="soft-skills-heading">
+      <h2 id="soft-skills-heading">Soft Skills</h2>
+      <ul role="list">
+        {SOFT_SKILLS.map((skill, index) => (
+          <li key={index}>{skill}</li>
+        ))}
       </ul>
     </section>
   );
-}
+});
 
-function WorkPreview() {
+const WorkPreview = React.memo(function WorkPreview() {
   return (
-    <section id="work" className={styles.work}>
-      <h2>Featured Projects</h2>
-      <WorkCarousel items={workItems} />
+    <section id="work" className={styles.work} aria-labelledby="work-heading">
+      <h2 id="work-heading">Featured Projects</h2>
+      <WorkCarousel items={WORK_ITEMS} />
     </section>
   );
-}
+});
 
-const workItems = [
-  {
-    title: 'NextGenTherapy',
-    image: '/images/NextGen.jpg',
-    description: 'Professional therapy website with booking system, SEO optimization, and Google Analytics integration.',
-    technologies: ['Next.js', 'React', 'CSS Modules', 'Google Analytics', 'JSON-LD', 'Vercel'],
-    link: 'https://next-gen-therapy-git-main-lukes-projects-f436770d.vercel.app/',
-    githubLink: 'https://github.com/ls99555', // Update with actual repo URL
-  },
-   {
-     title: 'Weather App',
-     image: '/images/weather-app.jpg',
-     description: 'Modern weather application with OpenWeatherMap API, dark/light themes, and real-time data.',
-     technologies: ['Next.js', 'TypeScript', 'OpenWeather API', 'CSS Modules', 'Dark Mode', 'Vercel'],
-     link: 'https://weather-app-one-tau-91.vercel.app/',
-     githubLink: 'https://github.com/ls99555', // Update with actual repo URL
-  },
-  
-];
-
-function Contact() {
+const Contact = React.memo(function Contact() {
   return (
-    <section id="contact" className={styles.contact}>
-      <h2>Contact Me</h2>
+    <section id="contact" className={styles.contact} aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Me</h2>
       <ContactForm />
     </section>
   );
-}
+});
 
 export default function Home() {
   return (

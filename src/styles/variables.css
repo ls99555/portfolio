@@ -11,16 +11,36 @@
   --color-button: #164b39;
   --color-button-hover: #d8995edc;
   --color-button-accent: #dbbfa4;
-  --color-button-home: #dc7726;
-  --color-button-home-hover: #4a545d;
+
   /* Spacing Variables */
+  --spacing-xs: 4px;
   --spacing-small: 12px;
   --spacing-medium: 20px;
   --spacing-large: 25px;
+  --spacing-xl: 40px;
   --spacing-layout: 80px;
 
+  /* Border radius */
+  --radius-small: 4px;
+  --radius-medium: 8px;
+  --radius-large: 12px;
+  --radius-xl: 16px;
+  --radius-round: 50%;
+
+  /* Layout */
   --header-height: 100px;
   --footer-height: 200px;
+
+  /* Component dimensions */
+  --back-to-top-size: 50px;
+  --back-to-top-bottom: 20px;
+  --back-to-top-right: 20px;
+
+  /* Breakpoints */
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-large: 1025px;
 
   /* Readability */
   --line-height-base: 1.6;
@@ -38,7 +58,40 @@
   --font-size-large: 20px;
   --font-size-logo: 35px;
 
-  /* hover*/
+  /* Accent colors */
   --color-accent: #164b39;
   --color-accent-hover: #d8995edc;
+
+  /* Loading and skeleton colors */
+  --color-skeleton-light: #f0f0f0;
+  --color-skeleton-dark: #e0e0e0;
+  --color-skeleton-bg-dark: #2a2a2a;
+  --color-skeleton-accent-dark: #3a3a3a;
+
+  /* Component sizing */
+  --size-spinner-small: 16px;
+  --size-spinner-medium: 24px;
+  --size-spinner-large: 40px;
+  --size-border-spinner-small: 1px;
+  --size-border-spinner-medium: 2px;
+  --size-border-spinner-large: 3px;
+
+  /* Skeleton sizing */
+  --size-skeleton-text-height: 16px;
+  --size-skeleton-rectangular-height: 120px;
+  --size-skeleton-border-radius: 4px;
+  --size-skeleton-circular-size: 40px;
+
+  /* Shadow values */
+  --shadow-small: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-large: 0 6px 20px rgba(0, 0, 0, 0.2);
+
+  /* Transform values */
+  --transform-hover-up: translateY(-2px);
+  --transform-small-up: translateY(-1px);
+  --transform-small-down: translateY(20px);
+
+  /* Outline offset */
+  --outline-offset: 2px;
 }

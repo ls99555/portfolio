@@ -1,0 +1,64 @@
+.errorBoundary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-large);
+  text-align: center;
+  min-height: 300px;
+  background: var(--color-background);
+  border: 1px solid var(--color-accent);
+  border-radius: 12px;
+  margin: var(--spacing-medium) 0;
+
+  h2 {
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-small);
+  }
+
+  p {
+    margin-bottom: var(--spacing-medium);
+    max-width: 500px;
+  }
+}
+
+.errorDetails {
+  margin: var(--spacing-medium) 0;
+  text-align: left;
+  background: #f5f5f5;
+  padding: var(--spacing-small);
+  border-radius: 8px;
+  max-width: 600px;
+  
+  summary {
+    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: var(--spacing-small);
+  }
+  
+  pre {
+    font-size: 0.875rem;
+    overflow-x: auto;
+    white-space: pre-wrap;
+  }
+}
+
+.retryButton {
+  background: var(--color-accent);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: var(--color-accent-hover);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}

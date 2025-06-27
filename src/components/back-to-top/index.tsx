@@ -1,27 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useScrollVisibility } from '../../hooks';
+import { SCROLL_THRESHOLD } from '../../config/constants';
 import styles from './back-to-top.module.scss';
 
 export default function BackToTop() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const toggleVisibility = () => {
-      // Show button when page is scrolled down 300px
-      if (window.pageYOffset > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-    window.addEventListener('scroll', toggleVisibility);
-
-    return () => {
-      window.removeEventListener('scroll', toggleVisibility);
-    };
-  }, []);
+  const isVisible = useScrollVisibility(SCROLL_THRESHOLD);
 
   const scrollToTop = () => {
     window.scrollTo({

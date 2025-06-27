@@ -4,15 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from './work-carousel.module.scss';
 import Button from '../button';
-
-interface WorkItem {
-  title: string;
-  image: string; // URL or import
-  description: string;
-  technologies?: string[];
-  link?: string;
-  githubLink?: string;
-}
+import type { WorkItem } from '../../types';
 
 interface WorkCarouselProps {
   items: WorkItem[];
@@ -36,7 +28,6 @@ export default function WorkCarousel({ items }: WorkCarouselProps) {
           className={styles.image}
           width={600}
           height={400}
-          style={{ objectFit: 'cover' }}
         />
         <p>{item.description}</p>
         {item.technologies && (

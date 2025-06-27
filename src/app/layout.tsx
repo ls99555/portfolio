@@ -5,6 +5,7 @@ import Footer from '../components/footer';
 import StructuredData from '../components/structured-data';
 import SkipNavigation from '../components/skip-navigation';
 import BackToTop from '../components/back-to-top';
+import ErrorBoundary from '../components/error-boundary';
 import { Roboto_Slab } from 'next/font/google';
 import { Caprasimo } from 'next/font/google';
 
@@ -68,13 +69,15 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body>
-        <SkipNavigation />
-        <Header />
-        <main id="main-content" tabIndex={-1}>
-          {children}
-        </main>
-        <Footer />
-        <BackToTop />
+        <ErrorBoundary>
+          <SkipNavigation />
+          <Header />
+          <main id="main-content" tabIndex={-1}>
+            {children}
+          </main>
+          <Footer />
+          <BackToTop />
+        </ErrorBoundary>
       </body>
     </html>
   );
