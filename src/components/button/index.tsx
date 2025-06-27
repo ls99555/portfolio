@@ -10,8 +10,11 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export default function Button({ href, children, target, rel, className, ...props }: ButtonProps) {
-  // Internal link (Next.js routing)
-  if (href && href.startsWith('/')) {
+  // Check if it's a downloadable file (PDF, DOC, etc.) - treat as external link
+  const isDownloadableFile = href && (href.endsWith('.pdf') || href.endsWith('.doc') || href.endsWith('.docx'));
+  
+  // Internal link (Next.js routing) - but not for downloadable files
+  if (href && href.startsWith('/') && !isDownloadableFile) {
     return (
       <Link href={href} className={`${styles.button} ${className || ''}`}>
         {children}
@@ -19,7 +22,7 @@ export default function Button({ href, children, target, rel, className, ...prop
     );
   }
 
-  // External link (http/https)
+  // External link (http/https) or downloadable files
   if (href) {
     return (
       <a
