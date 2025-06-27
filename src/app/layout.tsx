@@ -4,6 +4,7 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import StructuredData from '../components/structured-data';
 import SkipNavigation from '../components/skip-navigation';
+import BackToTop from '../components/back-to-top';
 import { Roboto_Slab } from 'next/font/google';
 import { Caprasimo } from 'next/font/google';
 
@@ -73,6 +74,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <BackToTop />
       </body>
     </html>
   );
