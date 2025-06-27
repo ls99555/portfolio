@@ -14,15 +14,18 @@
   text-align: center;
   width: 600px;
   max-width: 90vw;
+  min-height: 600px; // Ensures consistent carousel height
+  display: flex;
+  flex-direction: column;
 }
 
 .image {
   width: 100%;
-  height: auto;
+  height: 300px; // Fixed height for all images
   max-width: 560px;
-  max-height: 400px;
   object-fit: cover;
   border-radius: 12px;
+  flex-shrink: 0; // Prevents image from shrinking
 }
 
 .nav {
@@ -81,6 +84,32 @@
     color: var(--color-accent-hover);
     text-decoration: none;
   }
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: var(--spacing-small) 0;
+}
+
+.techBadge {
+  background: var(--color-accent);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.projectLinks {
+  display: flex;
+  gap: var(--spacing-large);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: var(--spacing-small) 0;
 }
 
 /* Tablet */

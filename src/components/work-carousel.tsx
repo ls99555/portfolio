@@ -9,7 +9,9 @@ interface WorkItem {
   title: string;
   image: string; // URL or import
   description: string;
+  technologies?: string[];
   link?: string;
+  githubLink?: string;
 }
 
 interface WorkCarouselProps {
@@ -37,11 +39,27 @@ export default function WorkCarousel({ items }: WorkCarouselProps) {
           style={{ objectFit: 'cover' }}
         />
         <p>{item.description}</p>
-        {item.link && (
-          <a className={styles.link} href={item.link} target="_blank" rel="noopener noreferrer">
-            View Project
-          </a>
+        {item.technologies && (
+          <div className={styles.technologies}>
+            {item.technologies.map((tech, index) => (
+              <span key={index} className={styles.techBadge}>
+                {tech}
+              </span>
+            ))}
+          </div>
         )}
+        <div className={styles.projectLinks}>
+          {item.link && (
+            <a className={styles.link} href={item.link} target="_blank" rel="noopener noreferrer">
+              View Project
+            </a>
+          )}
+          {item.githubLink && (
+            <a className={styles.link} href={item.githubLink} target="_blank" rel="noopener noreferrer">
+              View Code on GitHub
+            </a>
+          )}
+        </div>
         <div className={styles.carouselNavGroup}>
           <Button className={styles.nav} onClick={prev} aria-label="Previous">
             &#8592;

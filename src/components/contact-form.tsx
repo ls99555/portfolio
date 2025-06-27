@@ -5,12 +5,12 @@ import styles from './contact-form.module.scss';
 import Button from './button';
 
 export default function ContactForm() {
-  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const messageRef = useRef<HTMLTextAreaElement>(null);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setStatus('idle');
+    setStatus('loading');
     const form = event.currentTarget;
     const formData = {
       firstName: (form.elements.namedItem('firstName') as HTMLInputElement).value,
@@ -53,6 +53,9 @@ export default function ContactForm() {
       {status === 'error' && (
         <div className={styles.statusError}>Sorry, something went wrong. Please try again.</div>
       )}
+      {status === 'loading' && (
+        <div className={styles.statusLoading}>Sending your message...</div>
+      )}
       <div className={styles.formGroup}>
         <label htmlFor="firstName">First Name</label>
         <input type="text" id="firstName" name="firstName" required />
@@ -77,7 +80,9 @@ export default function ContactForm() {
           className={styles.textareaAutoGrow}
         ></textarea>
       </div>
-      <Button type="submit">Send</Button>
+      <Button type="submit" disabled={status === 'loading'}>
+        {status === 'loading' ? 'Sending...' : 'Send'}
+      </Button>
     </form>
   );
 }

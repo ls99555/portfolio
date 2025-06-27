@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import '../styles/globals.css';
 import Header from '../components/header';
 import Footer from '../components/footer';
+import StructuredData from '../components/structured-data';
 import { Roboto_Slab } from 'next/font/google';
 import { Caprasimo } from 'next/font/google';
 
@@ -61,6 +62,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${caprasimo.variable} ${robotoSlab.variable}`}>
+      <head>
+        <StructuredData />
+      </head>
       <body>
         <Header />
         {children}

@@ -14,7 +14,7 @@ function Banner() {
         <p>Based in Ipswich & seeking roles in Essex, Suffolk, and London.</p>
         <p>Building accessible, responsive web apps with React & Next.js.</p>
         <a href="#contact" className={styles.bannerCta}>
-          Let`s work together!
+          Let's work together!
         </a>
       </div>
       <div className={styles.bannerImage}>
@@ -36,22 +36,22 @@ function AboutMe() {
     <section className={styles.me}>
       <h2>From Electrician to Developer</h2>
       <p>
-        Hi, I’m Luke Stevens. I’m passionate about web development and am excited to start my career
-        as a front-end developer. I’ve recently completed the Codecademy Front-End Development and
-        Next.js certificates, and this portfolio site showcases the skills and technologies I’ve
+        Hi, I'm Luke Stevens. I'm passionate about web development and am excited to start my career
+        as a front-end developer. I've recently completed the Codecademy Front-End Development and
+        Next.js certificates, and this portfolio site showcases the skills and technologies I've
         learned so far.
       </p>
       <p>
         My journey into tech comes after 12 years as an electrician, both working for companies and
         running my own business. This experience has given me a strong work ethic, attention to
-        detail, and the ability to solve problems under pressure. I’m used to working independently
+        detail, and the ability to solve problems under pressure. I'm used to working independently
         and as part of a team, communicating clearly with clients and colleagues to get the job done
         right.
       </p>
       <p>
-        I’m eager to bring my hands-on experience, reliability, and enthusiasm for learning into a
+        I'm eager to bring my hands-on experience, reliability, and enthusiasm for learning into a
         junior front-end developer role. I love building things that are useful and easy to use, and
-        I’m excited to keep growing my skills in a professional environment.
+        I'm excited to keep growing my skills in a professional environment.
       </p>
     </section>
   );
@@ -60,7 +60,7 @@ function AboutMe() {
 function Weather() {
   return (
     <section className={styles.weather}>
-      <h2>Whats The Weather Like?</h2>
+      <h2>What's The Weather Like?</h2>
       <WeatherWidget />
     </section>
   );
@@ -131,14 +131,18 @@ const workItems = [
   {
     title: 'NextGenTherapy',
     image: '/images/NextGen.jpg',
-    description: 'A Website for a therapist I made.',
+    description: 'Professional therapy website with booking system, SEO optimization, and Google Analytics integration.',
+    technologies: ['Next.js', 'React', 'CSS Modules', 'Google Analytics', 'JSON-LD', 'Vercel'],
     link: 'https://next-gen-therapy-git-main-lukes-projects-f436770d.vercel.app/',
+    githubLink: 'https://github.com/ls99555', // Update with actual repo URL
   },
    {
      title: 'Weather App',
      image: '/images/weather-app.jpg',
-     description: 'A Weather App co written with Copilot',
+     description: 'Modern weather application with OpenWeatherMap API, dark/light themes, and real-time data.',
+     technologies: ['Next.js', 'TypeScript', 'OpenWeather API', 'CSS Modules', 'Dark Mode', 'Vercel'],
      link: 'https://weather-app-one-tau-91.vercel.app/',
+     githubLink: 'https://github.com/ls99555', // Update with actual repo URL
   },
   
 ];
