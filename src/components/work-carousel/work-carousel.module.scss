@@ -25,6 +25,7 @@
   height: 300px; // Fixed height for all images
   max-width: 560px;
   object-fit: cover;
+  object-position: center; // Ensure consistent centering
   border-radius: 12px;
   flex-shrink: 0; // Prevents image from shrinking
 }
@@ -138,7 +139,37 @@
     padding: var(--spacing-small);
   }
   .image {
+    width: 100%;
+    height: 240px; // Consistent height for mobile
     max-width: 380px;
-    max-height: 260px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .slide {
+    width: 95vw;
+    max-width: 95vw;
+    padding: var(--spacing-small);
+    min-height: 550px;
+  }
+  
+  .image {
+    width: 100%;
+    height: 200px; // Fixed height for all mobile images
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .technologies {
+    min-height: 60px; // Reduce height on mobile
+  }
+  
+  .techBadge {
+    font-size: 0.75rem;
+    padding: 3px 8px;
   }
 }
