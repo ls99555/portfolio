@@ -134,13 +134,13 @@ const workItems = [
     description: 'A Website for a therapist I made.',
     link: 'https://next-gen-therapy-git-main-lukes-projects-f436770d.vercel.app/',
   },
-  // {
-  //   title: 'Project Two',
-  //   image: '/images/NextGen.jpg',
-  //   description: 'Another awesome project.',
-  //   link: 'https://example.com/project2',
-  // },
-  // Add more items as needed
+   {
+     title: 'Weather App',
+     image: '/images/weather-app.jpg',
+     description: 'A Weather App co written with Copilot',
+     link: 'https://weather-app-one-tau-91.vercel.app/',
+  },
+  
 ];
 
 function Contact() {
