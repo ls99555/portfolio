@@ -14,7 +14,7 @@ body {
   overflow-x: hidden;
   background: var(--color-background);
   position: relative;
-  /* Prevent iOS Safari bounce scroll from showing unwanted background colors */
+  /* Ensure consistent background during iOS bounce scroll */
   background-color: var(--color-background) !important;
 }
 
@@ -88,23 +88,60 @@ li {
   }
 }
 
-/* iOS Safari specific fixes to prevent scroll bounce revealing background colors */
+/* iOS Safari specific fixes to ensure black background during bounce scroll */
 @supports (-webkit-touch-callout: none) {
   html {
     background: var(--color-background) !important;
-    height: 100%;
+    background-color: var(--color-background) !important;
   }
   
   body {
     background: var(--color-background) !important;
+    background-color: var(--color-background) !important;
     position: relative;
+  }
+  
+  /* Ensure the safe area at the top has the correct background */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: env(safe-area-inset-top, 0px);
+    background: var(--color-background);
+    z-index: 9999;
+    pointer-events: none;
+  }
+  
+  /* Override any potential green backgrounds but preserve intentional button/accent colors */
+  :not(button):not(.button):not([class*="button"]):not([class*="accent"]):not([style*="background"]) {
+    background-color: transparent !important;
   }
 }
 
-/* Modern browsers: prevent overscroll bounce */
-@supports (overscroll-behavior: none) {
-  html,
+/* iPhone safe area fixes - prevent green background in notch area */
+@supports (padding: max(0px)) {
+  html {
+    background: var(--color-background) !important;
+    padding-top: env(safe-area-inset-top, 0);
+  }
+  
   body {
-    overscroll-behavior: none;
+    background: var(--color-background) !important;
+  }
+}
+
+/* Ensure iPhone status bar area uses correct background */
+@media screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) {
+  html, body {
+    background: var(--color-background) !important;
+  }
+}
+
+/* Alternative iPhone models */
+@media screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  html, body {
+    background: var(--color-background) !important;
   }
 }
