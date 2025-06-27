@@ -86,8 +86,13 @@ function Weather() {
 function CV() {
   return (
     <section id="cv" className={styles.cv}>
-      <Button href="/cv.pdf" target="_blank" rel="noopener noreferrer" className={styles.cvLink}>
-        View My CV (PDF)
+      <Button
+        href="/resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.cvLink}
+      >
+        View My Resume (PDF)
       </Button>
     </section>
   );
