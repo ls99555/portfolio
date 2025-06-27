@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import '../styles/globals.css';
-import Header from '../components/header';
+import Header from '../components/header/index';
 import Footer from '../components/footer';
 import StructuredData from '../components/structured-data';
 import SkipNavigation from '../components/skip-navigation';
 import BackToTop from '../components/back-to-top';
-import ErrorBoundary from '../components/error-boundary';
+import ErrorBoundary from '../components/error-boundary/index';
 import GoogleAnalytics from '../components/google-analytics';
-import CookieNotice from '../components/cookie-notice';
+import CookieNotice from '../components/cookie-notice/index';
 import { getPublicEnvironmentVariables } from '../utils/env';
 import { Roboto_Slab } from 'next/font/google';
 import { Caprasimo } from 'next/font/google';
@@ -116,6 +116,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="theme-color" content="#000000" />
+        <link rel="preload" as="image" href="/images/profile.jpg" />
         <StructuredData />
       </head>
       <body>

@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import styles from './page.module.scss';
-import ContactForm from '../components/contact-form';
-import WeatherWidget from '../components/weather-widget';
-import WorkCarousel from '../components/work-carousel';
+import { LazyContactForm, LazyWeatherWidget, LazyWorkCarousel } from '../components/lazy-components';
 import Button from '../components/button';
 import { WORK_ITEMS, TECHNICAL_SKILLS, SOFT_SKILLS } from '../config/constants';
 
@@ -27,6 +25,7 @@ function Banner() {
           height={160}
           className={styles.profilePic}
           priority
+          sizes="160px"
         />
       </div>
     </div>
@@ -78,7 +77,7 @@ function Weather() {
   return (
     <section className={styles.weather}>
       <h2>What's The Weather Like?</h2>
-      <WeatherWidget />
+      <LazyWeatherWidget />
     </section>
   );
 }
@@ -128,7 +127,7 @@ function WorkPreview() {
   return (
     <section id="work" className={styles.work} aria-labelledby="work-heading">
       <h2 id="work-heading">Featured Projects</h2>
-      <WorkCarousel items={WORK_ITEMS} />
+      <LazyWorkCarousel items={WORK_ITEMS} />
     </section>
   );
 }
@@ -160,7 +159,7 @@ function Contact() {
         </div>
 
         <div className={styles.contactForm}>
-          <ContactForm />
+          <LazyContactForm />
         </div>
       </div>
     </section>

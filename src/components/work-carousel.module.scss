@@ -1,0 +1,126 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-medium);
+  color: var(--color-text);
+}
+
+.slide {
+  background: var(--color-background);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  padding: var(--spacing-medium);
+  text-align: center;
+  width: 600px;
+  max-width: 90vw;
+  min-height: 600px; // Ensures consistent carousel height
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: 100%;
+  height: 300px; // Fixed height for all images
+  max-width: 560px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0; // Prevents image from shrinking
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--color-button);
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--color-text);
+  border-radius: 50%;
+  transition: color 0.5s;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: 2px solid var(--color-accent-hover);
+    outline-offset: 2px;
+    background: var(--color-button-hover);
+    color: var(--color-accent-hover);
+  }
+  &:active {
+    transition: color 0.6s;
+  }
+  &:hover {
+    color: var(--color-accent-hover);
+    text-decoration: none;
+  }
+}
+
+.carouselNavGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: var(--spacing-small);
+  margin-top: var(--spacing-small);
+}
+
+.link {
+  color: #ecfd7eb0;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: var(--color-accent-hover);
+    text-decoration: none;
+  }
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: var(--spacing-small) 0;
+}
+
+.techBadge {
+  background: var(--color-accent);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.projectLinks {
+  display: flex;
+  gap: var(--spacing-large);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: var(--spacing-small) 0;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .slide {
+    width: 420px;
+    max-width: 98vw;
+    padding: var(--spacing-small);
+  }
+  .image {
+    max-width: 380px;
+    max-height: 260px;
+  }
+}
