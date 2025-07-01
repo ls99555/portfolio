@@ -24,13 +24,13 @@
 .errorDetails {
   margin: var(--spacing-medium) 0;
   text-align: left;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--glassmorphism-bg);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   padding: var(--spacing-small);
   border-radius: 8px;
   max-width: 600px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--glassmorphism-border);
   
   summary {
     cursor: pointer;
@@ -47,7 +47,7 @@
 
 .retryButton {
   background: var(--color-accent);
-  color: white;
+  color: var(--color-white);
   border: none;
   padding: 12px 24px;
   border-radius: 8px;

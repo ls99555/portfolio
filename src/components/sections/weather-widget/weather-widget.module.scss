@@ -1,6 +1,6 @@
 .weatherCard {
   color: var(--color-text);
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-small);
   max-width: 100%;
   width: 100%;
   min-width: 0;
@@ -28,14 +28,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--glassmorphism-bg);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   color: var(--color-text);
   padding: var(--spacing-medium);
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--glassmorphism-border);
+  box-shadow: 0 2px 16px var(--glassmorphism-shadow);
   font-family: 'Fira Mono', 'Menlo', 'Monaco', monospace;
   margin: 0 auto;
   width: fit-content;
@@ -75,7 +75,7 @@
 }
 
 .error {
-  color: #d32f2f;
+  color: var(--color-error);
   margin-top: 0.5rem;
 }
 

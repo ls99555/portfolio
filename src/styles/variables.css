@@ -1,6 +1,6 @@
 :root {
   /* background colors*/
-  --color-background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 100%);
+  --color-background: linear-gradient(135deg, #000000 0%, #1a1a2e 40%, #2a2a5e 100%);
   --color-background-secondary: #ffffff;
 
   /* text colors*/
@@ -9,13 +9,13 @@
   --color-header-text: #efecec;
 
   /* Button colors*/
-  --color-button: #164b39;
-  --color-button-hover: #d8995edc;
-  --color-button-accent: #dbbfa4;
+  --color-button: #0ea5e9;
+  --color-button-hover: #38bdf8;
+  --color-button-accent: #22d3ee;
 
   /* Link colors */
-  --color-link: #ecfd7eb0;
-  --color-link-hover: #d8995edc;
+  --color-link: #60a5fa;
+  --color-link-hover: #93c5fd;
 
   /* Spacing Variables */
   --spacing-xs: 4px;
@@ -63,8 +63,22 @@
   --font-size-logo: 35px;
 
   /* Accent colors */
-  --color-accent: #164b39;
-  --color-accent-hover: #d8995edc;
+  --color-accent: #0ea5e9;
+  --color-accent-hover: #38bdf8;
+
+  /* Status colors */
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+  
+  /* Border colors */
+  --color-border: #374151;
+  --color-border-light: #6b7280;
+  
+  /* Black and white utilities */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray-light: #f5f5f5;
 
   /* Loading and skeleton colors */
   --color-skeleton-light: #f0f0f0;
@@ -90,6 +104,12 @@
   --shadow-small: 0 2px 4px rgba(0, 0, 0, 0.1);
   --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.15);
   --shadow-large: 0 6px 20px rgba(0, 0, 0, 0.2);
+
+  /* Glassmorphism colors */
+  --glassmorphism-bg: rgba(255, 255, 255, 0.1);
+  --glassmorphism-border: rgba(255, 255, 255, 0.2);
+  --glassmorphism-shadow: rgba(0, 0, 0, 0.3);
+  --glassmorphism-overlay: rgba(15, 15, 15, 0.95);
 
   /* Transform values */
   --transform-hover-up: translateY(-2px);

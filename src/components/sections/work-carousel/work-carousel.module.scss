@@ -8,7 +8,7 @@
 
 .slide {
   border-radius: 16px;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-small);
   padding: var(--spacing-medium);
   text-align: center;
   width: 600px;
@@ -58,7 +58,8 @@
     transition: color 0.6s;
   }
   &:hover {
-    color: var(--color-accent-hover);
+    background: var(--color-button-hover);
+    color: var(--color-text);
     text-decoration: none;
   }
 }
@@ -72,7 +73,7 @@
 }
 
 .link {
-  color: #ecfd7eb0;
+  color: var(--color-link);
   text-decoration: underline;
   font-weight: 500;
   transition: color 0.2s;
@@ -80,7 +81,7 @@
 
   &:hover,
   &:focus {
-    color: var(--color-accent-hover);
+    color: var(--color-link-hover);
     text-decoration: none;
   }
 }
@@ -95,7 +96,7 @@
 
 .techBadge {
   background: var(--color-accent);
-  color: white;
+  color: var(--color-white);
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 0.875rem;
