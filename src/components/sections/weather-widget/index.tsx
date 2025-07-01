@@ -3,7 +3,7 @@
 import { useState, ChangeEvent, FormEvent, useEffect } from 'react';
 import { CloudIcon, MapPinIcon, ThermometerIcon } from 'lucide-react';
 import { DateTime } from 'luxon';
-import Button from '../button';
+import Button from '../../button';
 import styles from './weather-widget.module.scss';
 
 interface WeatherData {

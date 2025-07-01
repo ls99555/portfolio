@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from 'react';
 import styles from './contact-form.module.scss';
-import Button from '../button';
+import Button from '../../button';
 
 export default function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');

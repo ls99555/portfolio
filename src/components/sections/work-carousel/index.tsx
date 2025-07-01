@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from './work-carousel.module.scss';
-import Button from './button';
+import Button from '../../button';
 
 interface WorkItem {
   title: string;
