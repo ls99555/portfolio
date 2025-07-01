@@ -21,21 +21,23 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isMenuOpen ? styles.headerOpen : ''}`}>
       <nav className={styles.nav} ref={navRef}>
-        <div className={styles.logo}>
-          <a href="#about" onClick={closeMenu}>
-            <h1>Luke Stevens</h1>
-          </a>
+        <div className={styles.navTop}>
+          <div className={styles.logo}>
+            <a href="#about" onClick={closeMenu}>
+              <h1>Luke Stevens</h1>
+            </a>
+          </div>
+          <button
+            type="button"
+            className={styles.menuButton}
+            onClick={toggleMenu}
+            aria-label="Toggle navigation menu"
+          >
+            ☰
+          </button>
         </div>
-        <button
-          type="button"
-          className={styles.menuButton}
-          onClick={toggleMenu}
-          aria-label="Toggle navigation menu"
-        >
-          ☰
-        </button>
         <ul className={`${styles.navList} ${isMenuOpen ? styles.navListOpen : ''}`}>
           <li className={styles.navItem}>
             <a href="#contact" onClick={closeMenu}>
