@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://lstevens.dev'),
   title: 'Luke Stevens | Junior Front-End Developer Portfolio',
   description:
-    'Junior front-end developer from Ipswich seeking opportunities in Essex, Suffolk & London. Specializing in React, Next.js, TypeScript. View projects, skills & CV.',
+    'Junior front-end developer from Ipswich seeking opportunities in Essex, Suffolk & London. React, Next.js, TypeScript specialist.',
   authors: [{ name: 'Luke Stevens', url: 'https://lstevens.dev' }],
   creator: 'Luke Stevens',
   publisher: 'Luke Stevens',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Luke Stevens | Junior Front-End Developer Portfolio',
     description:
-      'Junior front-end developer from Ipswich seeking opportunities in Essex, Suffolk & London. View projects, skills & download CV.',
+      'Junior front-end developer from Ipswich seeking opportunities in Essex, Suffolk & London. React, Next.js, TypeScript specialist.',
     url: 'https://lstevens.dev',
     siteName: 'Luke Stevens Portfolio',
     images: [
@@ -96,7 +96,7 @@ export const metadata: Metadata = {
     canonical: 'https://lstevens.dev',
   },
   verification: {
-    // google: 'your-google-verification-code', // Add when you set up Google Search Console
+    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || undefined,
     // yandex: 'your-yandex-verification',
     // bing: 'your-bing-verification',
   },

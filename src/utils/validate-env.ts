@@ -5,13 +5,14 @@
 
 const requiredEnvVars = [
   'RESEND_API_KEY',
-  'NEXT_PUBLIC_GA_MEASUREMENT_ID',
   'OPENWEATHER_API_KEY',
 ] as const;
 
 const optionalEnvVars = [
   'NODE_ENV',
   'VERCEL_URL',
+  'NEXT_PUBLIC_GA_MEASUREMENT_ID',
+  'NEXT_PUBLIC_GOOGLE_VERIFICATION',
 ] as const;
 
 export function validateEnvVars() {
