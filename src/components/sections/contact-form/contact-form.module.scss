@@ -1,10 +1,13 @@
 /* Contact Form Container */
 .contactForm {
-  max-width: 900px;
-  width: 600px;
+  max-width: 500px;
+  width: 400px;
   margin: 0 auto;
   padding: var(--spacing-large);
-  background: var(--color-background-secondary);
+  background: var(--glassmorphism-overlay);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glassmorphism-border);
   border-radius: 12px;
   box-shadow: var(--shadow-medium);
   display: flex;
@@ -18,18 +21,27 @@
   input {
     width: 100%;
     padding: var(--spacing-small);
-    border: 1px solid var(--color-border-light);
+    background: var(--glassmorphism-bg);
+    border: 1px solid var(--glassmorphism-border);
     border-radius: 6px;
     font-size: var(--font-size-base);
+    color: var(--color-text);
     box-sizing: border-box;
     transition:
       border-color 0.2s,
+      background 0.2s,
       min-height 0.2s;
     min-height: 40px;
     resize: none;
 
+    &::placeholder {
+      color: var(--color-text);
+      opacity: 0.6;
+    }
+
     &:focus,
     &:focus-visible {
+      background: var(--glassmorphism-bg);
       border-color: var(--color-accent-hover);
       outline: 2px solid var(--color-accent-hover);
       outline-offset: 2px;
@@ -65,7 +77,7 @@
   flex-direction: column;
   gap: var(--spacing-small);
   margin-bottom: var(--spacing-medium);
-  color: var(--color-text-secondary);
+  color: var(--color-text);
 }
 
 /* Auto-grow textarea styling */
@@ -74,18 +86,27 @@
   max-height: 400px;
   width: 100%;
   padding: var(--spacing-small);
-  border: 1px solid var(--color-border-light);
+  background: var(--glassmorphism-bg);
+  border: 1px solid var(--glassmorphism-border);
   border-radius: 6px;
   font-size: var(--font-size-base);
+  color: var(--color-text);
   box-sizing: border-box;
   transition:
     border-color 0.2s,
+    background 0.2s,
     min-height 0.2s;
   overflow-y: auto;
   resize: none;
 
+  &::placeholder {
+    color: var(--color-text);
+    opacity: 0.6;
+  }
+
   &:focus,
   &:focus-visible {
+    background: var(--glassmorphism-bg);
     border-color: var(--color-accent-hover);
     outline: 2px solid var(--color-accent-hover);
     outline-offset: 2px;
@@ -106,7 +127,7 @@
 }
 
 /* Responsive */
-@media (max-width: 802px) {
+@media (max-width: 500px) {
   .contactForm {
     width: 100%;
     max-width: 100%;

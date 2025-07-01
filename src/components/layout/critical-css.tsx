@@ -2,7 +2,7 @@ export default function CriticalCSS() {
   return (
     <style dangerouslySetInnerHTML={{
       __html: `
-        /* Critical above-the-fold styles with enhanced background */
+        /* Critical above-the-fold styles with theme support */
         html {
           margin: 0;
           padding: 0;
@@ -14,6 +14,7 @@ export default function CriticalCSS() {
           padding-bottom: env(safe-area-inset-bottom);
           min-height: 100vh;
           min-height: 100dvh; /* Dynamic viewport height for better mobile support */
+          transition: background 0.3s ease, color 0.3s ease;
         }
         
         body {
@@ -28,6 +29,7 @@ export default function CriticalCSS() {
           padding-left: env(safe-area-inset-left);
           padding-right: env(safe-area-inset-right);
           padding-bottom: env(safe-area-inset-bottom);
+          transition: background 0.3s ease, color 0.3s ease;
         }
         
         /* Ensure all content respects safe areas */

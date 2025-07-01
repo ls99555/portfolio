@@ -52,6 +52,12 @@
     }
   }
 
+  .logoSection {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-medium);
+  }
+
   .logo {
     h1 {
       font-size: var(--font-size-logo);

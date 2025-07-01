@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { ThemeToggle } from '../ui';
 import styles from './header.module.scss';
 
 export default function Header() {
@@ -24,10 +25,13 @@ export default function Header() {
     <header className={`${styles.header} ${isMenuOpen ? styles.headerOpen : ''}`}>
       <nav className={styles.nav} ref={navRef}>
         <div className={styles.navTop}>
-          <div className={styles.logo}>
-            <a href="#about" onClick={closeMenu}>
-              <h1>Luke Stevens</h1>
-            </a>
+          <div className={styles.logoSection}>
+            <div className={styles.logo}>
+              <a href="#about" onClick={closeMenu}>
+                <h1>Luke Stevens</h1>
+              </a>
+            </div>
+            <ThemeToggle />
           </div>
           <button
             type="button"

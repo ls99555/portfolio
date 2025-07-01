@@ -68,10 +68,28 @@
 .input {
   flex: 1;
   padding: var(--spacing-small);
-  border: 1px solid var(--color-background-secondary);
+  background: var(--glassmorphism-bg);
+  border: 1px solid var(--glassmorphism-border);
   border-radius: 6px;
   min-width: 0;
   font-size: var(--font-size-base);
+  color: var(--color-text);
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+
+  &::placeholder {
+    color: var(--color-text);
+    opacity: 0.6;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background: var(--glassmorphism-bg);
+    border-color: var(--color-accent-hover);
+    outline: 2px solid var(--color-accent-hover);
+    outline-offset: 2px;
+  }
 }
 
 .error {
