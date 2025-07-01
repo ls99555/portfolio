@@ -1,1 +1,0 @@
-add better color styling rather than just black
