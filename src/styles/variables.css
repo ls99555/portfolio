@@ -1,15 +1,39 @@
 :root {
   /* Dark mode colors (default) */
+  
+  /* Background colors */
   --color-background: linear-gradient(135deg, #000000 0%, #1a1a2e 40%, #2a2a5e 100%);
   --color-background-secondary: #ffffff;
+  
+  /* Text colors */
   --color-text: #efecec;
   --color-text-secondary: #000000;
   --color-header-text: #efecec;
+  
+  /* Interactive colors */
   --color-button: #0ea5e9;
   --color-button-hover: #38bdf8;
   --color-button-accent: #22d3ee;
+  --color-accent: #0ea5e9;
+  --color-accent-hover: #38bdf8;
+  
+  /* Link colors */
   --color-link: #60a5fa;
   --color-link-hover: #93c5fd;
+  
+  /* Status colors */
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+  
+  /* Border colors */
+  --color-border: #374151;
+  --color-border-light: #6b7280;
+  
+  /* Utility colors */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray-light: #f5f5f5;
 
   /* Spacing Variables */
   --spacing-xs: 4px;
@@ -26,7 +50,18 @@
   --radius-xl: 16px;
   --radius-round: 50%;
 
-  /* Layout */
+  /* Font sizes */
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.5rem;
+  --font-size-h4: 1.25rem;
+  --font-size-h5: 1rem;
+  --font-size-h6: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-large: 20px;
+  --font-size-logo: 35px;
+
+  /* Layout dimensions */
   --header-height: 100px;
 
   /* Component dimensions */
@@ -40,70 +75,73 @@
   --breakpoint-desktop: 1024px;
   --breakpoint-large: 1025px;
 
-  /* Readability */
+  /* Typography */
   --line-height-base: 1.6;
   --paragraph-spacing: 1.2em;
   --list-spacing: 6px;
 
-  /* Font sizes */
-  --font-size-h1: 2.5rem;
-  --font-size-h2: 2rem;
-  --font-size-h3: 1.5rem;
-  --font-size-h4: 1.25rem;
-  --font-size-h5: 1rem;
-  --font-size-h6: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-large: 20px;
-  --font-size-logo: 35px;
-
-  /* Accent colors */
-  --color-accent: #0ea5e9;
-  --color-accent-hover: #38bdf8;
-
-  /* Status colors */
-  --color-success: #22c55e;
-  --color-error: #ef4444;
-  --color-warning: #f59e0b;
-  
-  /* Border colors */
-  --color-border: #374151;
-  --color-border-light: #6b7280;
-  
-  /* Black and white utilities */
-  --color-black: #000000;
-  --color-white: #ffffff;
-  --color-gray-light: #f5f5f5;
+  /* Glassmorphism colors (dark mode) */
+  --glassmorphism-bg: rgba(255, 255, 255, 0.08);
+  --glassmorphism-border: rgba(255, 255, 255, 0.15);
+  --glassmorphism-shadow: rgba(0, 0, 0, 0.25);
+  --glassmorphism-overlay: rgba(30, 41, 59, 0.9);
 }
 
 /* Light mode override */
 [data-theme="light"] {
-  --color-background: linear-gradient(135deg, #ffffff 0%, #f8fafc 40%, #e2e8f0 100%);
-  --color-background-secondary: #1f2937;
-  --color-text: #1f2937;
-  --color-text-secondary: #ffffff;
-  --color-header-text: #1f2937;
-  --color-button: #0ea5e9;
-  --color-button-hover: #0284c7;
-  --color-button-accent: #0891b2;
-  --color-link: #0284c7;
-  --color-link-hover: #0369a1;
-  --color-accent: #0ea5e9;
-  --color-accent-hover: #0284c7;
+  /* Background colors */
+  --color-background: linear-gradient(135deg, #fff7ed 0%, #fef3c7 15%, #dbeafe 60%, #bfdbfe 100%);
+  --color-background-secondary: #1e293b;
+  
+  /* Text colors */
+  --color-text: #1e293b;
+  --color-text-secondary: #f8fafc;
+  --color-header-text: #0f172a;
+  
+  /* Interactive colors */
+  --color-button: #1d4ed8;
+  --color-button-hover: #2563eb;
+  --color-button-accent: #3b82f6;
+  --color-accent: #1d4ed8;
+  --color-accent-hover: #2563eb;
+  
+  /* Link colors */
+  --color-link: #1d4ed8;
+  --color-link-hover: #2563eb;
+  
+  /* Status colors */
   --color-success: #059669;
   --color-error: #dc2626;
   --color-warning: #d97706;
-  --color-border: #d1d5db;
-  --color-border-light: #9ca3af;
+  
+  /* Border colors */
+  --color-border: #fed7aa;
+  --color-border-light: #fef3c7;
+  
+  /* Utility colors */
   --color-black: #000000;
   --color-white: #ffffff;
-  --color-gray-light: #374151;
-  --glassmorphism-bg: rgba(0, 0, 0, 0.1);
-  --glassmorphism-border: rgba(0, 0, 0, 0.2);
-  --glassmorphism-shadow: rgba(0, 0, 0, 0.1);
-  --glassmorphism-overlay: rgba(255, 255, 255, 0.95);
+  --color-gray-light: #92400e;
+  
+  /* Glassmorphism colors */
+  --glassmorphism-bg: rgba(255, 255, 255, 0.6);
+  --glassmorphism-border: rgba(251, 146, 60, 0.2);
+  --glassmorphism-shadow: rgba(251, 146, 60, 0.15);
+  --glassmorphism-overlay: rgba(255, 251, 235, 0.85);
+
+  /* Light mode shadow overrides */
+  --shadow-small: 0 2px 4px rgba(251, 146, 60, 0.1);
+  --shadow-medium: 0 4px 12px rgba(251, 146, 60, 0.15);
+  --shadow-large: 0 6px 20px rgba(251, 146, 60, 0.2);
 }
 
 :root {
+  /* Shared variables for both themes */
+  
+  /* Shadow values (will be overridden in light mode) */
+  --shadow-small: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-large: 0 6px 20px rgba(0, 0, 0, 0.2);
 
   /* Loading and skeleton colors */
   --color-skeleton-light: #f0f0f0;
@@ -124,17 +162,6 @@
   --size-skeleton-rectangular-height: 120px;
   --size-skeleton-border-radius: 4px;
   --size-skeleton-circular-size: 40px;
-
-  /* Shadow values */
-  --shadow-small: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.15);
-  --shadow-large: 0 6px 20px rgba(0, 0, 0, 0.2);
-
-  /* Glassmorphism colors */
-  --glassmorphism-bg: rgba(255, 255, 255, 0.1);
-  --glassmorphism-border: rgba(255, 255, 255, 0.2);
-  --glassmorphism-shadow: rgba(0, 0, 0, 0.3);
-  --glassmorphism-overlay: rgba(26, 42, 94, 0.85);
 
   /* Transform values */
   --transform-hover-up: translateY(-2px);
