@@ -15,7 +15,7 @@ body {
   background: var(--color-background);
   position: relative;
   /* Ensure consistent background during iOS bounce scroll */
-  background-color: var(--color-background) !important;
+  background: var(--color-background) !important;
 }
 
 body {

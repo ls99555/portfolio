@@ -1,6 +1,6 @@
 :root {
   /* background colors*/
-  --color-background: #000000;
+  --color-background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 100%);
   --color-background-secondary: #ffffff;
 
   /* text colors*/

@@ -2,7 +2,7 @@ export default function CriticalCSS() {
   return (
     <style dangerouslySetInnerHTML={{
       __html: `
-        /* Critical above-the-fold styles with notch coverage */
+        /* Critical above-the-fold styles with enhanced background */
         html {
           margin: 0;
           padding: 0;
