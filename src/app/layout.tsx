@@ -96,7 +96,7 @@ export const metadata: Metadata = {
     canonical: 'https://lstevens.dev',
   },
   verification: {
-    google: 'your-google-verification-code', // Add when you set up Google Search Console
+    // google: 'your-google-verification-code', // Add when you set up Google Search Console
     // yandex: 'your-yandex-verification',
     // bing: 'your-bing-verification',
   },
