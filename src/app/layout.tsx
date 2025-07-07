@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import '../styles/globals.css';
 import Header from '../components/header/index';
 import Footer from '../components/footer';
-import { StructuredData, CriticalCSS } from '../components/layout';
+import { StructuredData, CriticalCSS, ThemeMeta } from '../components/layout';
 import { SkipNavigation, BackToTop } from '../components/ui';
 import ErrorBoundary from '../components/error-boundary/index';
 import GoogleAnalytics from '../components/google-analytics';
@@ -110,16 +110,19 @@ export default function RootLayout({
   const { GA_MEASUREMENT_ID } = getPublicEnvironmentVariables();
 
   return (
-    <html lang="en" className={`${caprasimo.variable} ${robotoSlab.variable}`}>
+    <html lang="en" className={`${caprasimo.variable} ${robotoSlab.variable}`} data-theme="dark">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=contain" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <meta name="theme-color" content="#1a1a2e" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="dark-content" />
         <link rel="preload" as="image" href="/images/profile.jpg" />
         <CriticalCSS />
         <StructuredData />
       </head>
       <body>
         <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} />
+        <ThemeMeta />
         <ErrorBoundary>
           <SkipNavigation />
           <Header />

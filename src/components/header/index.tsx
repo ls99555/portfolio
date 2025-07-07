@@ -28,7 +28,10 @@ export default function Header() {
           <div className={styles.logoSection}>
             <div className={styles.logo}>
               <a href="#about" onClick={closeMenu}>
-                <h1>Luke Stevens</h1>
+                <h1>
+                  <span className={styles.fullName}>Luke Stevens</span>
+                  <span className={styles.initials}>LS</span>
+                </h1>
               </a>
             </div>
             <ThemeToggle />
