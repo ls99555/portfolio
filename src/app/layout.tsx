@@ -8,11 +8,8 @@ import ErrorBoundary from '../components/error-boundary/index';
 import GoogleAnalytics from '../components/google-analytics';
 import CookieNotice from '../components/cookie-notice/index';
 import { getPublicEnvironmentVariables } from '../utils/env';
-import { Roboto_Slab } from 'next/font/google';
-import { Caprasimo } from 'next/font/google';
 
-const caprasimo = Caprasimo({ weight: '400', subsets: ['latin'], variable: '--font-caprasimo' });
-const robotoSlab = Roboto_Slab({ subsets: ['latin'], variable: '--font-roboto-slab' });
+// Use system fonts instead of Google Fonts for now
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://lstevens.dev'),
@@ -96,7 +93,7 @@ export const metadata: Metadata = {
     canonical: 'https://lstevens.dev',
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || undefined,
+    google: getPublicEnvironmentVariables().GOOGLE_VERIFICATION || undefined,
     // yandex: 'your-yandex-verification',
     // bing: 'your-bing-verification',
   },
@@ -110,7 +107,7 @@ export default function RootLayout({
   const { GA_MEASUREMENT_ID } = getPublicEnvironmentVariables();
 
   return (
-    <html lang="en" className={`${caprasimo.variable} ${robotoSlab.variable}`} data-theme="dark">
+    <html lang="en" data-theme="dark">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         <meta name="theme-color" content="#1a1a2e" />

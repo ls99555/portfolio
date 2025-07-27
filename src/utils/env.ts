@@ -2,6 +2,9 @@
  * Environment variables validation and type safety
  */
 
+// Type assertion for process.env
+declare const process: NodeJS.Process & { env: NodeJS.ProcessEnv };
+
 interface EnvironmentVariables {
   NEXT_PUBLIC_WEATHER_API_KEY: string;
   RESEND_API_KEY: string;
@@ -44,5 +47,6 @@ export function getPublicEnvironmentVariables() {
   return {
     WEATHER_API_KEY: process.env.NEXT_PUBLIC_WEATHER_API_KEY || '',
     GA_MEASUREMENT_ID: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || '',
+    GOOGLE_VERIFICATION: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || '',
   };
 }

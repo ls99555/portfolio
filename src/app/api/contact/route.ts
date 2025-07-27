@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
+// Type assertion for process.env
+declare const process: NodeJS.Process & { env: NodeJS.ProcessEnv };
+
 // Simple in-memory rate limiting (for production, use Redis or similar)
 const submissions = new Map<string, { count: number; lastReset: number }>();
 const RATE_LIMIT = 3; // 3 submissions per hour

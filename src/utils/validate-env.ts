@@ -3,6 +3,9 @@
  * Add this to ensure all required env vars are present
  */
 
+// Type assertion for process.env
+declare const process: NodeJS.Process & { env: NodeJS.ProcessEnv };
+
 const requiredEnvVars = [
   'RESEND_API_KEY',
   'OPENWEATHER_API_KEY',
