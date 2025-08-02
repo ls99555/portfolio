@@ -8,6 +8,7 @@ import ErrorBoundary from '../components/error-boundary/index';
 import GoogleAnalytics from '../components/google-analytics';
 import CookieNotice from '../components/cookie-notice/index';
 import { getPublicEnvironmentVariables } from '../utils/env';
+import { Analytics } from "@vercel/analytics/next";
 
 // Use system fonts instead of Google Fonts for now
 
@@ -129,6 +130,7 @@ export default function RootLayout({
           <Footer />
           <BackToTop />
           <CookieNotice />
+          <Analytics />
         </ErrorBoundary>
       </body>
     </html>
