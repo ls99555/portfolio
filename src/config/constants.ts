@@ -38,7 +38,7 @@ export const WORK_ITEMS: WorkItem[] = [
   },
   {
     title: 'NextGen Therapy',
-    image: '/images/NextGen.jpg',
+    image: '/images/default-social-share.png',
     description:
       'Professional therapy practice website with modern design and optimized user experience. Features responsive layout and performance optimization.',
     technologies: ['Next.js', 'React', 'CSS Modules', 'SEO Optimization', 'Responsive Design'],

@@ -9,6 +9,7 @@ import GoogleAnalytics from '../components/google-analytics';
 import CookieNotice from '../components/cookie-notice/index';
 import { getPublicEnvironmentVariables } from '../utils/env';
 import { Analytics } from "@vercel/analytics/next";
+import AnalyticsDebug from '../components/analytics-debug';
 
 // Use system fonts instead of Google Fonts for now
 
@@ -131,6 +132,7 @@ export default function RootLayout({
           <BackToTop />
           <CookieNotice />
           <Analytics />
+          <AnalyticsDebug />
         </ErrorBoundary>
       </body>
     </html>
