@@ -45,6 +45,15 @@ export const WORK_ITEMS: WorkItem[] = [
     link: 'https://nextgentherapy.co.uk/',
     githubLink: 'https://github.com/ls99555/NextGenTherapy',
   },
+  {
+    title: 'Catan Map Generator',
+    image: '/images/catan-map-generator.svg',
+    description:
+      'Free online tool for creating balanced Settlers of Catan maps. Generates fair resource distribution and number placement with support for 3-6 players and statistical analysis.',
+    technologies: ['Next.js', 'TypeScript', 'SVG', 'Responsive Design', 'Game Logic'],
+    link: 'https://www.catanmapgenerator.app/',
+    githubLink: 'https://github.com/ls99555/catan-map-generator',
+  },
 ] as const;
 
 export const TECHNICAL_SKILLS = [
